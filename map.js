@@ -165,3 +165,72 @@
 
 // console.log(result);
 
+const products = [
+    {
+        id: 1,
+        name: "Shirt",
+        price: 1200,
+        discount: 200,
+        category: "clothing",
+        stock: 12,
+        rating: 4.5,
+        tags: ["cotton", "summer", "casual"]
+    },
+    {
+        id: 2,
+        name: "Shoe",
+        price: 2500,
+        discount: 500,
+        category: "footwear",
+        stock: 0,
+        rating: 4.8,
+        tags: ["leather", "premium", "outdoor"]
+    },
+    {
+        id: 3,
+        name: "Cap",
+        price: 800,
+        discount: 100,
+        category: "accessory",
+        stock: 20,
+        rating: 4.1,
+        tags: ["summer", "casual"]
+    },
+    {
+        id: 4,
+        name: "Pant",
+        price: 1800,
+        discount: 300,
+        category: "clothing",
+        stock: 5,
+        rating: 4.3,
+        tags: ["denim", "casual", "regular"]
+    },
+    {
+        id: 5,
+        name: "Watch",
+        price: 3500,
+        discount: 700,
+        category: "accessory",
+        stock: 0,
+        rating: 4.9,
+        tags: ["premium", "metal", "gift"]
+    }
+];
+
+
+const priceOnly = products.map(product => product.price - product.discount);
+const nameOnly = products.map(product => product.name);
+const stringOnly = products.map(product => product.price - product.discount)
+
+const stringFinal = products.map(product => product.name + " - ৳" + (product.price - product.discount));
+
+const result = products.map(product => ({ name: product.name, finalPrice: product.price - product.discount }));
+
+console.log(result);
+
+console.log(priceOnly);
+console.log(nameOnly);
+console.log(stringFinal);
+console.log(result);
+
