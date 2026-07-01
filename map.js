@@ -233,6 +233,8 @@ const final = products.map(product => ({ ...product, finalPrice: product.price -
 
 const available = products.map(product => ({ name: product.name, stockStatus: product.stock > 0 ? "Available" : "Out of Stock" }));
 
+const button = products.map(product => ({ name: product.name, buttonText: product.stock > 0 ? "Add to Cart" : "Out of Stock", buttonDisabled: product.stock === 0 }));
+
 
 
 console.log(result);
@@ -243,5 +245,6 @@ console.log(result);
 console.log(res);
 console.log(final);
 console.log(available);
+console.log(button);
 
 
