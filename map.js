@@ -96,7 +96,7 @@
 
 // console.log(result);
 
-const numbers = [15, 20, 25];
+// const numbers = [15, 20, 25];
 
 // const result = numbers.map(number => {
 //     return number + 100;
@@ -126,4 +126,42 @@ const numbers = [15, 20, 25];
 // const finalPrice = products.map(product => product.price - product.discount);
 
 // console.log(finalPrice);
+
+// const numbers = [2, 4, 6];
+
+// const result = numbers.map(number => number * 2);
+
+// console.log(result);
+
+// const prices = [100, 200, 300];
+
+// const result = prices.map(price => price + 50);
+
+// console.log(result);
+
+// const names = ["Rohan", "Hasan", "Karim"];
+
+// const greetings = names.map(name => "Hello " + name);
+
+// console.log(greetings);
+
+// const products = [
+//     { name: "Bag", price: 1200 },
+//     { name: "Watch", price: 3500 },
+//     { name: "Cap", price: 800 }
+// ];
+
+// const result = products.map(product => product.name);
+// console.log(result);
+
+
+// const products = [
+//     { name: "Bag", price: 1200 },
+//     { name: "Watch", price: 3500 },
+//     { name: "Cap", price: 800 }
+// ];
+
+// const result = products.map(product => product.price);
+
+// console.log(result);
 
