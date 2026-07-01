@@ -91,8 +91,39 @@
 // const numbers = [5, 10, 15];
 
 // const result = numbers.map(function (number) {
-//     return result * 2;
+//     return number * 2;
 // });
 
 // console.log(result);
+
+const numbers = [15, 20, 25];
+
+// const result = numbers.map(number => {
+//     return number + 100;
+// })
+
+// const result = numbers.map(number => number + 100);
+
+// console.log(result);
+
+
+// const products = [
+//     { name: "Shirt", price: 1200 },
+//     { name: "Shoe", price: 2500 },
+//     { name: "Cap", price: 800 }
+// ];
+
+// const result = products.map(product => product.name + " Available");
+
+// console.log(result);
+
+// const products = [
+//     { name: "Shirt", price: 1200, discount: 200 },
+//     { name: "Shoe", price: 2500, discount: 500 },
+//     { name: "Cap", price: 800, discount: 100 }
+// ];
+
+// const finalPrice = products.map(product => product.price - product.discount);
+
+// console.log(finalPrice);
 
