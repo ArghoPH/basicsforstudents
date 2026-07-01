@@ -220,7 +220,9 @@ const products = [
 
 
 const priceOnly = products.map(product => product.price - product.discount);
+
 const nameOnly = products.map(product => product.name);
+
 const stringOnly = products.map(product => product.price - product.discount)
 
 const stringFinal = products.map(product => product.name + " - ৳" + (product.price - product.discount));
