@@ -36,3 +36,19 @@
 // })
 
 // console.log(result);
+
+// const numbers = [10, 20, 30];
+
+// const add = numbers.map(function (num) {
+//     return num + 5;
+// })
+
+// console.log(add);
+
+// const numbers = [10, 20, 30, 40];
+
+// const add = numbers.map(function (num) {
+//     return num * 5;
+// })
+// console.log(numbers);
+// console.log(add);
