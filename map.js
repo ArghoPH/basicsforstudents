@@ -52,3 +52,47 @@
 // })
 // console.log(numbers);
 // console.log(add);
+
+// const products = ["Shirt", "Shoe", "Cap"];
+
+// const result = products.map(function (product) {
+//     return product + " Available";
+// });
+
+// console.log(result);
+
+// const products = [
+//     { name: "Shirt", price: 1200 },
+//     { name: "Shoe", price: 2500 },
+//     { name: "Cap", price: 800 }
+// ];
+
+// const names = products.map(function (product) {
+//     return product.name;
+// })
+
+// const price = products.map(function (product) {
+//     return product.price;
+// })
+
+// console.log(names);
+// console.log(price);
+
+// const result = numbers.map(function (number) {
+//     return number * 2;
+// })
+
+// const result = numbers.map((number) => {
+//     return number * 2;
+// })
+
+// const result = numbers.map(number => number * 2);
+
+// const numbers = [5, 10, 15];
+
+// const result = numbers.map(function (number) {
+//     return result * 2;
+// });
+
+// console.log(result);
+
