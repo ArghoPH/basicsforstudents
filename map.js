@@ -227,10 +227,21 @@ const stringFinal = products.map(product => product.name + " - ৳" + (product.p
 
 const result = products.map(product => ({ name: product.name, finalPrice: product.price - product.discount }));
 
-console.log(result);
+const res = products.map(product => ({ name: product.name, finalPrice: product.price - product.discount }));
 
+const final = products.map(product => ({ ...product, finalPrice: product.price - product.discount }));
+
+const available = products.map(product => ({ name: product.name, stockStatus: product.stock > 0 ? "Available" : "Out of Stock" }));
+
+
+
+console.log(result);
 console.log(priceOnly);
 console.log(nameOnly);
 console.log(stringFinal);
 console.log(result);
+console.log(res);
+console.log(final);
+console.log(available);
+
 
