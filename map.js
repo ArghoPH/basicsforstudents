@@ -290,6 +290,7 @@ const products = [
 ];
 
 const availableProducts = products.filter(product => product.stock > 0);
+
 const outOfStockProducts = products.filter(product => product.stock === 0);
 
 const clothingProducts = products.filter(product => product.category === "clothing");
