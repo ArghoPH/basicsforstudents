@@ -165,88 +165,114 @@
 
 // console.log(result);
 
+// const products = [
+//     {
+//         id: 1,
+//         name: "Shirt",
+//         price: 1200,
+//         discount: 200,
+//         category: "clothing",
+//         stock: 12,
+//         rating: 4.5,
+//         tags: ["cotton", "summer", "casual"]
+//     },
+//     {
+//         id: 2,
+//         name: "Shoe",
+//         price: 2500,
+//         discount: 500,
+//         category: "footwear",
+//         stock: 0,
+//         rating: 4.8,
+//         tags: ["leather", "premium", "outdoor"]
+//     },
+//     {
+//         id: 3,
+//         name: "Cap",
+//         price: 800,
+//         discount: 100,
+//         category: "accessory",
+//         stock: 20,
+//         rating: 4.1,
+//         tags: ["summer", "casual"]
+//     },
+//     {
+//         id: 4,
+//         name: "Pant",
+//         price: 1800,
+//         discount: 300,
+//         category: "clothing",
+//         stock: 5,
+//         rating: 4.3,
+//         tags: ["denim", "casual", "regular"]
+//     },
+//     {
+//         id: 5,
+//         name: "Watch",
+//         price: 3500,
+//         discount: 700,
+//         category: "accessory",
+//         stock: 0,
+//         rating: 4.9,
+//         tags: ["premium", "metal", "gift"]
+//     }
+// ];
+
+
+// const priceOnly = products.map(product => product.price - product.discount);
+
+// const nameOnly = products.map(product => product.name);
+
+// const stringOnly = products.map(product => product.price - product.discount)
+
+// const stringFinal = products.map(product => product.name + " - ৳" + (product.price - product.discount));
+
+// const result = products.map(product => ({ name: product.name, finalPrice: product.price - product.discount }));
+
+// const res = products.map(product => ({ name: product.name, finalPrice: product.price - product.discount }));
+
+// const final = products.map(product => ({ ...product, finalPrice: product.price - product.discount }));
+
+// const available = products.map(product => ({ name: product.name, stockStatus: product.stock > 0 ? "Available" : "Out of Stock" }));
+
+// const button = products.map(product => ({ name: product.name, buttonText: product.stock > 0 ? "Add to Cart" : "Out of Stock", buttonDisabled: product.stock === 0 }));
+
+
+
+// console.log(result);
+// console.log(priceOnly);
+// console.log(nameOnly);
+// console.log(stringFinal);
+// console.log(result);
+// console.log(res);
+// console.log(final);
+// console.log(available);
+// console.log(button);
+
+
 const products = [
-    {
-        id: 1,
-        name: "Shirt",
-        price: 1200,
-        discount: 200,
-        category: "clothing",
-        stock: 12,
-        rating: 4.5,
-        tags: ["cotton", "summer", "casual"]
-    },
-    {
-        id: 2,
-        name: "Shoe",
-        price: 2500,
-        discount: 500,
-        category: "footwear",
-        stock: 0,
-        rating: 4.8,
-        tags: ["leather", "premium", "outdoor"]
-    },
-    {
-        id: 3,
-        name: "Cap",
-        price: 800,
-        discount: 100,
-        category: "accessory",
-        stock: 20,
-        rating: 4.1,
-        tags: ["summer", "casual"]
-    },
-    {
-        id: 4,
-        name: "Pant",
-        price: 1800,
-        discount: 300,
-        category: "clothing",
-        stock: 5,
-        rating: 4.3,
-        tags: ["denim", "casual", "regular"]
-    },
-    {
-        id: 5,
-        name: "Watch",
-        price: 3500,
-        discount: 700,
-        category: "accessory",
-        stock: 0,
-        rating: 4.9,
-        tags: ["premium", "metal", "gift"]
-    }
+    { id: 1, name: "Shirt", price: 1200, discount: 200, category: "clothing", stock: 12 },
+    { id: 2, name: "Shoe", price: 2500, discount: 500, category: "footwear", stock: 0 },
+    { id: 3, name: "Cap", price: 800, discount: 100, category: "accessory", stock: 20 },
+    { id: 4, name: "Pant", price: 1800, discount: 300, category: "clothing", stock: 5 },
+    { id: 5, name: "Watch", price: 3500, discount: 700, category: "accessory", stock: 0 }
 ];
 
+const productName = products.map(product => product.name);
 
-const priceOnly = products.map(product => product.price - product.discount);
+const productPrice = products.map(product => product.price - product.discount);
 
-const nameOnly = products.map(product => product.name);
+const array = products.map(product => ({ name: product.name, finalPrice: product.price - product.discount }))
 
-const stringOnly = products.map(product => product.price - product.discount)
+const finalPrice = products.map(product => ({ ...product, finalPrice: product.price - product.discount }));
 
-const stringFinal = products.map(product => product.name + " - ৳" + (product.price - product.discount));
+const status = products.map(product => ({ name: product.name, status: product.stock ? 'Available' : 'Out of Stock' }));
 
-const result = products.map(product => ({ name: product.name, finalPrice: product.price - product.discount }));
+const button = products.map(product => ({ name: product.name, buttonText: product.stock > 0 ? 'Add to cart' : 'Out of Stock', disabled: product.stock === 0 }));
 
-const res = products.map(product => ({ name: product.name, finalPrice: product.price - product.discount }));
-
-const final = products.map(product => ({ ...product, finalPrice: product.price - product.discount }));
-
-const available = products.map(product => ({ name: product.name, stockStatus: product.stock > 0 ? "Available" : "Out of Stock" }));
-
-const button = products.map(product => ({ name: product.name, buttonText: product.stock > 0 ? "Add to Cart" : "Out of Stock", buttonDisabled: product.stock === 0 }));
-
-
-
-console.log(result);
-console.log(priceOnly);
-console.log(nameOnly);
-console.log(stringFinal);
-console.log(result);
-console.log(res);
-console.log(final);
-console.log(available);
+console.log(productName);
+console.log(productPrice);
+console.log(array);
+console.log(finalPrice);
+console.log(status);
 console.log(button);
-
-
