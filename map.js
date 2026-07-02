@@ -250,29 +250,56 @@
 // console.log(button);
 
 
+// const products = [
+//     { id: 1, name: "Shirt", price: 1200, discount: 200, category: "clothing", stock: 12 },
+//     { id: 2, name: "Shoe", price: 2500, discount: 500, category: "footwear", stock: 0 },
+//     { id: 3, name: "Cap", price: 800, discount: 100, category: "accessory", stock: 20 },
+//     { id: 4, name: "Pant", price: 1800, discount: 300, category: "clothing", stock: 5 },
+//     { id: 5, name: "Watch", price: 3500, discount: 700, category: "accessory", stock: 0 }
+// ];
+
+// const productName = products.map(product => product.name);
+
+// const productPrice = products.map(product => product.price - product.discount);
+
+// const array = products.map(product => ({ name: product.name, finalPrice: product.price - product.discount }))
+
+// const finalPrice = products.map(product => ({ ...product, finalPrice: product.price - product.discount }));
+
+// const status = products.map(product => ({ name: product.name, status: product.stock ? 'Available' : 'Out of Stock' }));
+
+// const button = products.map(product => ({ name: product.name, buttonText: product.stock > 0 ? 'Add to cart' : 'Out of Stock', disabled: product.stock === 0 }));
+
+// console.log(productName);
+// console.log(productPrice);
+// console.log(array);
+// console.log(finalPrice);
+// console.log(status);
+// console.log(button);
+
+
+
+// ************ FILTER ***************
+
 const products = [
-    { id: 1, name: "Shirt", price: 1200, discount: 200, category: "clothing", stock: 12 },
-    { id: 2, name: "Shoe", price: 2500, discount: 500, category: "footwear", stock: 0 },
-    { id: 3, name: "Cap", price: 800, discount: 100, category: "accessory", stock: 20 },
-    { id: 4, name: "Pant", price: 1800, discount: 300, category: "clothing", stock: 5 },
-    { id: 5, name: "Watch", price: 3500, discount: 700, category: "accessory", stock: 0 }
+    { id: 1, name: "Shirt", price: 1200, category: "clothing", stock: 12 },
+    { id: 2, name: "Shoe", price: 2500, category: "footwear", stock: 0 },
+    { id: 3, name: "Cap", price: 800, category: "accessory", stock: 20 },
+    { id: 4, name: "Pant", price: 1800, category: "clothing", stock: 5 },
+    { id: 5, name: "Watch", price: 3500, category: "accessory", stock: 0 }
 ];
 
-const productName = products.map(product => product.name);
+const availableProducts = products.filter(product => product.stock > 0);
+const outOfStockProducts = products.filter(product => product.stock === 0);
 
-const productPrice = products.map(product => product.price - product.discount);
+const clothingProducts = products.filter(product => product.category === "clothing");
 
-const array = products.map(product => ({ name: product.name, finalPrice: product.price - product.discount }))
+const price1500 = products.filter(product => product.price > 1500);
 
-const finalPrice = products.map(product => ({ ...product, finalPrice: product.price - product.discount }));
+const result = products.filter(product => product.stock > 0 && product.price > 1000);
 
-const status = products.map(product => ({ name: product.name, status: product.stock ? 'Available' : 'Out of Stock' }));
-
-const button = products.map(product => ({ name: product.name, buttonText: product.stock > 0 ? 'Add to cart' : 'Out of Stock', disabled: product.stock === 0 }));
-
-console.log(productName);
-console.log(productPrice);
-console.log(array);
-console.log(finalPrice);
-console.log(status);
-console.log(button);
+console.log(availableProducts);
+console.log(outOfStockProducts);
+console.log(clothingProducts);
+console.log(price1500);
+console.log(result);
