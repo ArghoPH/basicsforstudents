@@ -308,44 +308,65 @@
 
 // ************ ForEach ***************
 
-const numbers = [10, 20, 30];
+// const numbers = [10, 20, 30];
 
-numbers.forEach(number => {
-    console.log(number);
-});
+// numbers.forEach(number => {
+//     console.log(number);
+// });
 
-const products = ["Shirt", "Shoe", "Cap"];
+// const products = ["Shirt", "Shoe", "Cap"];
 
-// **Normal function**
-products.forEach(function (product) {
-    console.log(product);
-})
+// // **Normal function**
+// products.forEach(function (product) {
+//     console.log(product);
+// })
 
-// **Arrow function**
-products.forEach(product => {
-    console.log(product);
-});
+// // **Arrow function**
+// products.forEach(product => {
+//     console.log(product);
+// });
 
-products.forEach(product => {
-    console.log(product + ' Available');
-});
-
-
-// **** forEach() vs map() ****
+// products.forEach(product => {
+//     console.log(product + ' Available');
+// });
 
 
-// **forEach**
-numbers.forEach(number => {
-    console.log(number + 5);
-});
+// // **** forEach() vs map() ****
 
-// **Map**
 
-const result = numbers.map((number => {
-    return number + 5;
-}));
+// // **forEach**
+// numbers.forEach(number => {
+//     console.log(number + 5);
+// });
 
-console.log(result);
+// // **Map**
+
+// const result = numbers.map((number => {
+//     return number + 5;
+// }));
+
+// console.log(result);
 
 // ## forEach() = শুধু কাজ করার জন্য ##
 // ## map() = নতুন array বানানোর জন্য ##
+
+const products = [
+    { id: 1, name: "Shirt", price: 1200, stock: 12 },
+    { id: 2, name: "Shoe", price: 2500, stock: 0 },
+    { id: 3, name: "Cap", price: 800, stock: 20 }
+];
+
+products.forEach(product => {
+    console.log(product.name);
+    console.log(product.price);
+
+})
+
+//  ****** total calculate *******
+let total = 0;
+
+products.forEach(product => {
+    total = total + product.price;
+});
+
+console.log(total);
