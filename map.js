@@ -316,6 +316,13 @@ numbers.forEach(number => {
 
 const products = ["Shirt", "Shoe", "Cap"];
 
+// **Normal function**
+products.forEach(function (product) {
+    console.log(product);
+})
+
+// **Arrow function**
 products.forEach(product => {
     console.log(product);
 })
+
