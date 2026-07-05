@@ -324,5 +324,28 @@ products.forEach(function (product) {
 // **Arrow function**
 products.forEach(product => {
     console.log(product);
-})
+});
 
+products.forEach(product => {
+    console.log(product + ' Available');
+});
+
+
+// **** forEach() vs map() ****
+
+
+// **forEach**
+numbers.forEach(number => {
+    console.log(number + 5);
+});
+
+// **Map**
+
+const result = numbers.map((number => {
+    return number + 5;
+}));
+
+console.log(result);
+
+// ## forEach() = শুধু কাজ করার জন্য ##
+// ## map() = নতুন array বানানোর জন্য ##
