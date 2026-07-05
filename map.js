@@ -393,19 +393,15 @@
 //     console.log(array);
 // })
 
-// ****** Creating HTML ******
+// // ****** Creating HTML ******
 
-const products = ["Shirt", "Shoe", "Cap"];
+// const products = ["Shirt", "Shoe", "Cap"];
 
-products.forEach(product => {
-    console.log('<li>${product}</li>');
-});
+// products.forEach(product => {
+//     console.log('<li>${product}</li>');
+// });
 
-//  *** With back ***
-products.forEach(product => {
-    console.log(`<li>${product}</li>`);
-});
-
-
-
-
+// //  *** With back ***
+// products.forEach(product => {
+//     console.log(`<li>${product}</li>`);
+// }); 
