@@ -350,23 +350,58 @@
 // ## forEach() = শুধু কাজ করার জন্য ##
 // ## map() = নতুন array বানানোর জন্য ##
 
-const products = [
-    { id: 1, name: "Shirt", price: 1200, stock: 12 },
-    { id: 2, name: "Shoe", price: 2500, stock: 0 },
-    { id: 3, name: "Cap", price: 800, stock: 20 }
-];
+// const products = [
+//     { id: 1, name: "Shirt", price: 1200, stock: 12 },
+//     { id: 2, name: "Shoe", price: 2500, stock: 0 },
+//     { id: 3, name: "Cap", price: 800, stock: 20 }
+// ];
+
+// products.forEach(product => {
+//     console.log(product.name);
+//     console.log(product.price);
+
+// })
+
+// //  ****** total calculate *******
+// let total = 0;
+
+// products.forEach(product => {
+//     total = total + product.price;
+// });
+
+// console.log(total);
+
+
+// //  ****** forEach Parameters *****
+
+// array.forEach(item, index, fullarray => {
+
+// });
+
+// ******** Full array access *********
+
+// const products = ["Shirt", "Shoe", "Cap"];
+
+// products.forEach((product, index) => {
+//     console.log(index + 1 + ". " + product);
+// });
+
+// products.forEach((product, index, array) => {
+
+//     console.log(index);
+//     console.log(product);
+//     console.log(array);
+// })
+
+// ****** Creating HTML ******
+
+const products = ["Shirt", "Shoe", "Cap"];
 
 products.forEach(product => {
-    console.log(product.name);
-    console.log(product.price);
-
-})
-
-//  ****** total calculate *******
-let total = 0;
-
-products.forEach(product => {
-    total = total + product.price;
+    console.log('<li>${product}</li>');
 });
 
-console.log(total);
+//  *** With back ***
+products.forEach(product => {
+    console.log(`<li>${product}</li>`);
+});
