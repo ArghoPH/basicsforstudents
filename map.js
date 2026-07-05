@@ -319,7 +319,3 @@ const products = ["Shirt", "Shoe", "Cap"];
 products.forEach(product => {
     console.log(product);
 })
-
-products.forEach(function (product) {
-    console.log(product);
-})
