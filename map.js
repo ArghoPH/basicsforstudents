@@ -405,3 +405,7 @@ products.forEach(product => {
 products.forEach(product => {
     console.log(`<li>${product}</li>`);
 });
+
+
+
+
