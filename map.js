@@ -281,26 +281,45 @@
 
 // ************ FILTER ***************
 
-const products = [
-    { id: 1, name: "Shirt", price: 1200, category: "clothing", stock: 12 },
-    { id: 2, name: "Shoe", price: 2500, category: "footwear", stock: 0 },
-    { id: 3, name: "Cap", price: 800, category: "accessory", stock: 20 },
-    { id: 4, name: "Pant", price: 1800, category: "clothing", stock: 5 },
-    { id: 5, name: "Watch", price: 3500, category: "accessory", stock: 0 }
-];
+// const products = [
+//     { id: 1, name: "Shirt", price: 1200, category: "clothing", stock: 12 },
+//     { id: 2, name: "Shoe", price: 2500, category: "footwear", stock: 0 },
+//     { id: 3, name: "Cap", price: 800, category: "accessory", stock: 20 },
+//     { id: 4, name: "Pant", price: 1800, category: "clothing", stock: 5 },
+//     { id: 5, name: "Watch", price: 3500, category: "accessory", stock: 0 }
+// ];
 
-const availableProducts = products.filter(product => product.stock > 0);
+// const availableProducts = products.filter(product => product.stock > 0);
 
-const outOfStockProducts = products.filter(product => product.stock === 0);
+// const outOfStockProducts = products.filter(product => product.stock === 0);
 
-const clothingProducts = products.filter(product => product.category === "clothing");
+// const clothingProducts = products.filter(product => product.category === "clothing");
 
-const price1500 = products.filter(product => product.price > 1500);
+// const price1500 = products.filter(product => product.price > 1500);
 
-const result = products.filter(product => product.stock > 0 && product.price > 1000);
+// const result = products.filter(product => product.stock > 0 && product.price > 1000);
 
-console.log(availableProducts);
-console.log(outOfStockProducts);
-console.log(clothingProducts);
-console.log(price1500);
-console.log(result);
+// console.log(availableProducts);
+// console.log(outOfStockProducts);
+// console.log(clothingProducts);
+// console.log(price1500);
+// console.log(result);
+
+
+// ************ ForEach ***************
+
+const numbers = [10, 20, 30];
+
+numbers.forEach(number => {
+    console.log(number);
+});
+
+const products = ["Shirt", "Shoe", "Cap"];
+
+products.forEach(product => {
+    console.log(product);
+})
+
+products.forEach(function (product) {
+    console.log(product);
+})
