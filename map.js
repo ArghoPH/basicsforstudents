@@ -529,7 +529,7 @@ const products = [
 const total = 0;
 
 products.forEach((product, index) => {
-    products[index] = 
+    products[index]
 })
 
-// console.log(products)
+console.log(products)
