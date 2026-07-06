@@ -532,4 +532,4 @@ products.forEach((product, index) => {
     products[index] = 
 })
 
-console.log(products)
+// console.log(products)
