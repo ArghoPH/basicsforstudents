@@ -393,15 +393,143 @@
 //     console.log(array);
 // })
 
-// ****** Creating HTML ******
 
-const products = ["Shirt", "Shoe", "Cap"];
 
-products.forEach(product => {
-    console.log('<li>${product}</li>');
-});
+// const products = ["Shirt", "Shoe", "Cap"];
 
-//  *** With back ***
-products.forEach(product => {
-    console.log(`<li>${product}</li>`);
-}); 
+
+// // ****** Creating HTML ******
+
+// products.forEach(product => {
+//     console.log('<li>${product}</li>');
+// });
+
+// //  *** With back ***
+// products.forEach(product => {
+//     console.log(`<li>${product}</li>`);
+// });
+
+// **** Condition ****
+
+// const products = [
+//     { id: 1, name: "Shirt", price: 1200, stock: 12 },
+//     { id: 2, name: "Shoe", price: 2500, stock: 0 },
+//     { id: 3, name: "Cap", price: 800, stock: 20 }
+// ];
+
+// products.forEach((product) => {
+//     if (product.stock > 0) {
+//         console.log(product.name + ' Available');
+//     } else {
+//         console.log(product.name + ' Stock Out');
+//     }
+// });
+
+// const products = [
+//     { id: 1, name: "Shirt", price: 1200, stock: 12 },
+//     { id: 2, name: "Shoe", price: 2500, stock: 0 },
+//     { id: 3, name: "Cap", price: 800, stock: 20 },
+//     { id: 4, name: "Pant", price: 1800, stock: 5 }
+// ];
+
+// products.forEach((product, index) => {
+
+//     console.log(product.name);
+
+//     console.log(product.name + ' - ' + '৳' + product.price);
+
+//     console.log(index + 1 + '. ' + product.name)
+
+//     if (product.stock > 0) {
+//         console.log(product.name + ': ' + ' Available');
+//     } else {
+//         console.log(product.name + ':' + 'Stock Out');
+//     };
+
+
+// });
+
+// const products = [
+//     { id: 1, name: "Shirt", price: 1200, stock: 12 },
+//     { id: 2, name: "Shoe", price: 2500, stock: 0 },
+//     { id: 3, name: "Cap", price: 800, stock: 20 },
+//     { id: 4, name: "Pant", price: 1800, stock: 5 }
+// ];
+
+// let total = 0;
+
+// products.forEach(product => {
+//     total += product.price;
+// })
+
+// console.log(total);
+
+// const numbers = [10, 20, 30];
+
+// numbers.forEach((number, index) => {
+//     numbers[index] = number + 5
+// });
+
+// console.log(numbers)
+
+// const products = ["Shirt", "Shoe", "Cap"];
+
+// const result = [];
+
+// products.forEach(product => {
+//     result.push(product + " Available");
+// });
+
+// console.log(result);
+
+// const products = [
+//     { id: 1, name: "Shirt", price: 1200, stock: 12 },
+//     { id: 2, name: "Shoe", price: 2500, stock: 0 },
+//     { id: 3, name: "Cap", price: 800, stock: 20 },
+//     { id: 4, name: "Pant", price: 1800, stock: 5 }
+// ];
+
+// let total = 0;
+// products.forEach(product => {
+//     total += product.price;
+// })
+// console.log(total);
+
+// products.forEach(product => {
+//     if (product.stock > 0) {
+//         console.log(product.name + ' Available');
+//     } else {
+//         console.log(product.name + ' Stock Out');
+//     };
+// });
+
+
+// let res = [];
+
+// products.forEach((product, index) => {
+//     res.push(product.name);
+// });
+
+// console.log(res);
+
+// products.forEach((product, index) => {
+//     products[index].price = product.price + 100;
+// });
+
+// console.log(products);   
+
+const products = [
+    { id: 1, name: "Shirt", price: 1200, stock: 12, category: "clothing" },
+    { id: 2, name: "Shoe", price: 2500, stock: 0, category: "footwear" },
+    { id: 3, name: "Cap", price: 800, stock: 20, category: "accessory" },
+    { id: 4, name: "Pant", price: 1800, stock: 5, category: "clothing" },
+    { id: 5, name: "Watch", price: 3500, stock: 0, category: "accessory" }
+];
+
+const total = 0;
+
+products.forEach((product, index) => {
+    products[index] = 
+})
+
+console.log(products)
