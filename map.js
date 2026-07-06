@@ -516,20 +516,20 @@
 //     products[index].price = product.price + 100;
 // });
 
-// console.log(products);   
+// console.log(products);
 
-const products = [
-    { id: 1, name: "Shirt", price: 1200, stock: 12, category: "clothing" },
-    { id: 2, name: "Shoe", price: 2500, stock: 0, category: "footwear" },
-    { id: 3, name: "Cap", price: 800, stock: 20, category: "accessory" },
-    { id: 4, name: "Pant", price: 1800, stock: 5, category: "clothing" },
-    { id: 5, name: "Watch", price: 3500, stock: 0, category: "accessory" }
-];
+// const products = [
+//     { id: 1, name: "Shirt", price: 1200, stock: 12, category: "clothing" },
+//     { id: 2, name: "Shoe", price: 2500, stock: 0, category: "footwear" },
+//     { id: 3, name: "Cap", price: 800, stock: 20, category: "accessory" },
+//     { id: 4, name: "Pant", price: 1800, stock: 5, category: "clothing" },
+//     { id: 5, name: "Watch", price: 3500, stock: 0, category: "accessory" }
+// ];
 
-const total = 0;
+// const total = 0;
 
-products.forEach((product, index) => {
-    products[index]
-})
+// products.forEach((product, index) => {
+//     products[index]
+// })
 
-console.log(products)
+// console.log(products)
