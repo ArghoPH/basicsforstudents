@@ -613,3 +613,36 @@ products.forEach((product, index) => {
     console.log((index + 1) + ". " + product.name + " - ৳" + product.price);
 });
 
+let total = 0;
+
+products.forEach(product =>
+    total += product.price
+);
+
+console.log(total);
+
+products.forEach(product => {
+    if (product.stock > 0) {
+        console.log(product.name + ' Available')
+    }
+});
+
+products.forEach((product, index) => {
+    console.log(products[index].price + 100);
+})
+
+
+
+const result = products.map((product, index) => {
+    return (index + 1) + ". " + product.name;
+});
+
+console.log(result);
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// ########## (product, index) => console.log(product.name) #############
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+products.forEach((product, index) =>
+    console.log(`${index + 1}. ${product.name} - ৳${product.price}`)
+);
