@@ -641,8 +641,19 @@ console.log(result);
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // ########## (product, index) => console.log(product.name) #############
+// #########  কিন্তু যদি একাধিক line হয়, তখন {} দিতে হবে     ############
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+
+//   ${product.name}    এটা current product-এর name দেখায়।   
+
+// Single 
 products.forEach((product, index) =>
     console.log(`${index + 1}. ${product.name} - ৳${product.price}`)
 );
+
+// Multiple
+products.forEach((product, index) => {
+    const serial = index + 1;
+    console.log(`${serial}. ${product.name} - ৳${product.price}`);
+});
