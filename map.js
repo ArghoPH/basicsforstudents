@@ -534,16 +534,28 @@
 
 // console.log(products)
 
+// const products = [
+//     { name: "Bag", price: 1200 },
+//     { name: "Watch", price: 3500 },
+//     { name: "Cap", price: 800 }
+// ];
+
+// const result = products.map(product => {
+//     return product.price;
+// })
+
+// const no = products.map(product => product.price)
+
+// console.log(result);
+
 const products = [
-    { name: "Bag", price: 1200 },
-    { name: "Watch", price: 3500 },
-    { name: "Cap", price: 800 }
+    { name: "Shirt", price: 1200, discount: 200 },
+    { name: "Shoe", price: 2500, discount: 500 },
+    { name: "Cap", price: 800, discount: 100 }
 ];
 
-const result = products.map(product => {
-    return product.price;
-})
-
-const no = products.map(product => product.price)
+const result = products.map(product => product.price - product.discount);
+const total = products.map((product => { product.name - product.price - product.discount }));
 
 console.log(result);
+console.log(total);
