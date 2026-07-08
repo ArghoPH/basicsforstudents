@@ -586,15 +586,30 @@ const products = [
     { id: 5, name: "Watch", price: 3500, stock: 0, category: "accessory" }
 ];
 
-const result = products.map(product => product.price + 100);
-const res = products.map(product => {
-    return product.name + ' - ৳' + (product.price + 100);
-})
+// const result = products.map(product => product.price + 100);
+// const res = products.map(product => {
+//     return product.name + ' - ৳' + (product.price + 100);
+// })
 // ##################################################################
 // ######## @@@@@      Object array result     @@@@@@ ###############
 // ##################################################################
-const aray = products.map(product => ({ name: product.name, Updatedprice: product.price + 100 }))
+// const aray = products.map(product => ({ name: product.name, Updatedprice: product.price + 100 }))
 
-console.log(result);
-console.log(res);
-console.log(aray);
+// console.log(result);
+// console.log(res);
+// console.log(aray);
+
+
+// ##################################################################
+// 
+// 
+// ######## @@@@@      arrow function-এ parameter ২টা হলে () দিতে হয়।    
+// ########            ১টা parameter হলে () না দিলেও চলে               
+// 
+// 
+// @@@@@@ ###############
+// ##################################################################
+products.forEach((product, index) => {
+    console.log((index + 1) + ". " + product.name + " - ৳" + product.price);
+});
+
