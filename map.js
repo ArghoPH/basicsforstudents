@@ -585,3 +585,16 @@ const products = [
     { id: 4, name: "Pant", price: 1800, stock: 5, category: "clothing" },
     { id: 5, name: "Watch", price: 3500, stock: 0, category: "accessory" }
 ];
+
+const result = products.map(product => product.price + 100);
+const res = products.map(product => {
+    return product.name + ' - ৳' + (product.price + 100);
+})
+// ##################################################################
+// ######## @@@@@      Object array result     @@@@@@ ###############
+// ##################################################################
+const aray = products.map(product => ({ name: product.name, Updatedprice: product.price + 100 }))
+
+console.log(result);
+console.log(res);
+console.log(aray);
