@@ -533,3 +533,17 @@
 // })
 
 // console.log(products)
+
+const products = [
+    { name: "Bag", price: 1200 },
+    { name: "Watch", price: 3500 },
+    { name: "Cap", price: 800 }
+];
+
+const result = products.map(product => {
+    return product.price;
+})
+
+const no = products.map(product => product.price)
+
+console.log(result);
