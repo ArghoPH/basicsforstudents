@@ -548,14 +548,40 @@
 
 // console.log(result);
 
+// const products = [
+//     { name: "Shirt", price: 1200, discount: 200 },
+//     { name: "Shoe", price: 2500, discount: 500 },
+//     { name: "Cap", price: 800, discount: 100 }
+// ];
+
+// const result = products.map(product => product.price - product.discount);
+// const total = products.map((product => { product.name - product.price - product.discount }));
+
+// console.log(result);
+// console.log(total);
+
+
+// const products = [
+//     { id: 1, name: "Shirt", price: 1200, stock: 12, category: "clothing" },
+//     { id: 2, name: "Shoe", price: 2500, stock: 0, category: "footwear" },
+//     { id: 3, name: "Cap", price: 800, stock: 20, category: "accessory" },
+//     { id: 4, name: "Pant", price: 1800, stock: 5, category: "clothing" },
+//     { id: 5, name: "Watch", price: 3500, stock: 0, category: "accessory" }
+// ];
+
+
+// let total = 0;
+
+// products.forEach((product, index) => {
+//     total += products[index].price;
+// });
+
+// console.log(total);
+
 const products = [
-    { name: "Shirt", price: 1200, discount: 200 },
-    { name: "Shoe", price: 2500, discount: 500 },
-    { name: "Cap", price: 800, discount: 100 }
+    { id: 1, name: "Shirt", price: 1200, stock: 12, category: "clothing" },
+    { id: 2, name: "Shoe", price: 2500, stock: 0, category: "footwear" },
+    { id: 3, name: "Cap", price: 800, stock: 20, category: "accessory" },
+    { id: 4, name: "Pant", price: 1800, stock: 5, category: "clothing" },
+    { id: 5, name: "Watch", price: 3500, stock: 0, category: "accessory" }
 ];
-
-const result = products.map(product => product.price - product.discount);
-const total = products.map((product => { product.name - product.price - product.discount }));
-
-console.log(result);
-console.log(total);
