@@ -578,83 +578,83 @@
 
 // console.log(total);
 
-const products = [
-    { id: 1, name: "Shirt", price: 1200, stock: 12, category: "clothing" },
-    { id: 2, name: "Shoe", price: 2500, stock: 0, category: "footwear" },
-    { id: 3, name: "Cap", price: 800, stock: 20, category: "accessory" },
-    { id: 4, name: "Pant", price: 1800, stock: 5, category: "clothing" },
-    { id: 5, name: "Watch", price: 3500, stock: 0, category: "accessory" }
-];
+// const products = [
+//     { id: 1, name: "Shirt", price: 1200, stock: 12, category: "clothing" },
+//     { id: 2, name: "Shoe", price: 2500, stock: 0, category: "footwear" },
+//     { id: 3, name: "Cap", price: 800, stock: 20, category: "accessory" },
+//     { id: 4, name: "Pant", price: 1800, stock: 5, category: "clothing" },
+//     { id: 5, name: "Watch", price: 3500, stock: 0, category: "accessory" }
+// ];
 
-// const result = products.map(product => product.price + 100);
-// const res = products.map(product => {
-//     return product.name + ' - ৳' + (product.price + 100);
+// // const result = products.map(product => product.price + 100);
+// // const res = products.map(product => {
+// //     return product.name + ' - ৳' + (product.price + 100);
+// // })
+// // ##################################################################
+// // ######## @@@@@      Object array result     @@@@@@ ###############
+// // ##################################################################
+// // const aray = products.map(product => ({ name: product.name, Updatedprice: product.price + 100 }))
+
+// // console.log(result);
+// // console.log(res);
+// // console.log(aray);
+
+
+// // ##################################################################
+// //
+// //
+// // ######## @@@@@      arrow function-এ parameter ২টা হলে () দিতে হয়।
+// // ########            ১টা parameter হলে () না দিলেও চলে
+// //
+// //
+// // @@@@@@ ###########################################################
+// // ##################################################################
+
+// products.forEach((product, index) => {
+//     console.log((index + 1) + ". " + product.name + " - ৳" + product.price);
+// });
+
+// let total = 0;
+
+// products.forEach(product =>
+//     total += product.price
+// );
+
+// console.log(total);
+
+// products.forEach(product => {
+//     if (product.stock > 0) {
+//         console.log(product.name + ' Available')
+//     }
+// });
+
+// products.forEach((product, index) => {
+//     console.log(products[index].price + 100);
 // })
-// ##################################################################
-// ######## @@@@@      Object array result     @@@@@@ ###############
-// ##################################################################
-// const aray = products.map(product => ({ name: product.name, Updatedprice: product.price + 100 }))
+
+
+
+// const result = products.map((product, index) => {
+//     return (index + 1) + ". " + product.name;
+// });
 
 // console.log(result);
-// console.log(res);
-// console.log(aray);
+
+// // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// // ########## (product, index) => console.log(product.name) #############
+// // #########  কিন্তু যদি একাধিক line হয়, তখন {} দিতে হবে     ############
+// // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
-// ##################################################################
-// 
-// 
-// ######## @@@@@      arrow function-এ parameter ২টা হলে () দিতে হয়।    
-// ########            ১টা parameter হলে () না দিলেও চলে               
-// 
-// 
-// @@@@@@ ###########################################################
-// ##################################################################
+// //   ${product.name}    এটা current product-এর name দেখায়।
 
-products.forEach((product, index) => {
-    console.log((index + 1) + ". " + product.name + " - ৳" + product.price);
-});
+// // Single
+// products.forEach((product, index) =>
+//     console.log(`${index + 1}. ${product.name} - ৳${product.price}`)
+// );
 
-let total = 0;
-
-products.forEach(product =>
-    total += product.price
-);
-
-console.log(total);
-
-products.forEach(product => {
-    if (product.stock > 0) {
-        console.log(product.name + ' Available')
-    }
-});
-
-products.forEach((product, index) => {
-    console.log(products[index].price + 100);
-})
-
-
-
-const result = products.map((product, index) => {
-    return (index + 1) + ". " + product.name;
-});
-
-console.log(result);
-
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// ########## (product, index) => console.log(product.name) #############
-// #########  কিন্তু যদি একাধিক line হয়, তখন {} দিতে হবে     ############
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-
-//   ${product.name}    এটা current product-এর name দেখায়।   
-
-// Single 
-products.forEach((product, index) =>
-    console.log(`${index + 1}. ${product.name} - ৳${product.price}`)
-);
-
-// Multiple
-products.forEach((product, index) => {
-    const serial = index + 1;
-    console.log(`${serial}. ${product.name} - ৳${product.price}`);
-});
+// // Multiple
+// products.forEach((product, index) => {
+//     const serial = index + 1;
+//     console.log(`${serial}. ${product.name} - ৳${product.price}`);
+// });
