@@ -461,8 +461,33 @@ orders.filter(order => {
 
 const resultstatus = orders.map(order => order.customer + " -" + (order.paid ? "Paid" : "Unpaid")); // () eta tokhonoi use korba jokhon mone korba ei calculate age howa uchit nahole age age string banale golabarud hobe
 
+
+// high value order বের করো, যাদের total 3000-এর বেশি
+
+const highOrder = orders.filter(order => order.total > 3000).map(order => order.customer).join(", ");
+
+// high value order-এর custom object বানাও
+
+const highcustom = orders
+    .filter(order => order.total > 3000)
+    .map(order => ({ customer: order.customer, total: order.total, type: "High Value" }));
+
+// forEach() দিয়ে total paid sales calculate করো
+
+let totals = 0;
+
+orders.forEach(order => order.paid && (totals += order.total)); // ( ccalculate ) ta age korano hocche
+
+console.log(totals);
+
+
+
+
 console.log(paid);
 console.log(unpaid);
 console.log(dhaka);
 console.log(totalDhaka);
 console.log(resultstatus);
+console.log(highOrder);
+console.log(highcustom);
+console.log(totals);
