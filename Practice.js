@@ -369,16 +369,13 @@ const products = [
 ];
 
 // All products price
-
 const product = products.map(product => product.price - product.discount);
 
+// Specific products price
 const result = products.slice(0, 2).map(product => ({ name: product.name, finalPrice: product.price - product.discount }))
 
-const stock = products.filter(product => {
-    if (product.stock > 0) {
-        return product.name;
-    }
-})
+// Only stocked products 
+const stock = products.filter(product => product.stock > 0).map(product => product.name);
 
 console.log(product);
 console.log(result);
