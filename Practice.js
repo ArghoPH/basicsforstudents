@@ -400,6 +400,9 @@ products.forEach(product => total += product.price);
 let tot = 0;
 products.forEach(product => tot += product.price - product.discount);
 
+// category অনুযায়ী শুধু clothing products
+
+const cat = products.filter(product => product.category === "clothing").map(product => product.name).join(", "); // join( separator ) array-এর সব item কে একসাথে করে string বানায়।
 
 
 console.log(product);
@@ -409,4 +412,5 @@ console.log(res);
 console.log(status);
 console.log(total);
 console.log(tot);
+console.log(cat);
 
