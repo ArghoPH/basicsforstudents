@@ -377,6 +377,15 @@ const result = products.slice(0, 2).map(product => ({ name: product.name, finalP
 // Only stocked products 
 const stock = products.filter(product => product.stock > 0).map(product => product.name);
 
+// stock আছে এবং finalPrice 1000-এর বেশি এমন product
+
+const res = products
+    .filter(product => product.stock > 0 && product.price - product.discount > 1000)
+    .map(product => product.name);
+
 console.log(product);
 console.log(result);
 console.log(stock);
+console.log(res);
+
+
