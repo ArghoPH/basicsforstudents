@@ -476,12 +476,20 @@ const highcustom = orders
 
 let totals = 0;
 
-orders.forEach(order => order.paid && (totals += order.total)); // ( ccalculate ) ta age korano hocche
+orders.forEach(order => order.paid && (totals += order.total)); // ( calculate ) ta group e kora hocche condition mille tarpore ei calculation hobe
 
 console.log(totals);
 
+// forEach() দিয়ে total unpaid sales calculate করো
+
+let unpaids = 0;
+
+orders.forEach(order => !order.paid && (unpaids += order.total)); // ! = false
 
 
+// final report 
+
+const final = orders.map(order => order.customer + " ordered " + order.items + " items from " + order.city + " " + (order.paid ? "Paid" : "Unpaid"));
 
 console.log(paid);
 console.log(unpaid);
@@ -491,3 +499,5 @@ console.log(resultstatus);
 console.log(highOrder);
 console.log(highcustom);
 console.log(totals);
+console.log(unpaids);
+console.log(final);
