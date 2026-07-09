@@ -391,11 +391,22 @@ const status = products.map(product => ({      // map() diye prottek product the
     status: product.stock > 0 ? "Available" : "Out of stock"
 }));
 
+// forEach() দিয়ে total original price calculate
+
+let total = 0;
+products.forEach(product => total += product.price);
+
+// forEach() দিয়ে total final price calculate
+let tot = 0;
+products.forEach(product => tot += product.price - product.discount);
+
+
 
 console.log(product);
 console.log(result);
 console.log(stock);
 console.log(res);
 console.log(status);
-
+console.log(total);
+console.log(tot);
 
