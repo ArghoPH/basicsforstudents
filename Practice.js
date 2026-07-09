@@ -13,10 +13,10 @@
 var age = 19;
 var CGPA = 4.00;
 
-if (age >= 18 && CGPA >= 3.00){
+if (age >= 18 && CGPA >= 3.00) {
     console.log('Eligible')
 }
-else{
+else {
     console.log('Not Eligible')
 }
 
@@ -34,17 +34,17 @@ else{
 
 
 const Customer = "VIP";
-const Shopping = 10000 ;
+const Shopping = 10000;
 const isVIP = true;
 
-if(Shopping >= 5000 || isVIP == true) {
-    const   discount = Shopping * 10 / 100 ;
+if (Shopping >= 5000 || isVIP == true) {
+    const discount = Shopping * 10 / 100;
     console.log(Shopping)
     console.log(discount)
     console.log(Shopping - discount);
 }
 
-else{
+else {
     console.log(Shopping);
 }
 
@@ -63,11 +63,11 @@ let isWritten = true;
 let isDriving = false;
 
 
-if(age >= 18 && isWritten == true && isDriving == true ) {
+if (age >= 18 && isWritten == true && isDriving == true) {
     console.log('passed for the license')
 }
 
-else{
+else {
     console.log('Try Again next Time')
 }
 
@@ -81,10 +81,10 @@ else{
 
 var age = 12;
 
-if(age <= 12 || age >= 60){
+if (age <= 12 || age >= 60) {
     console.log('Free Movie')
 }
-else{
+else {
     console.log('get Ticket')
 }
 
@@ -96,14 +96,14 @@ else{
 // 👉 টেস্ট করার জন্য username = "admin", password = "1234" ধরে কোড লিখো।
 
 
-var username = 'admin' ;
-var password = '1234' ;
+var username = 'admin';
+var password = '1234';
 
-if(username == 'admin' && password == '1234') {
+if (username == 'admin' && password == '1234') {
     console.log('login')
 }
 
-else{
+else {
     console.log('wrong username or password')
 }
 
@@ -122,36 +122,36 @@ else{
 
 var age = 20;
 const isDegree = true;
-let experiences = 2 ;
+let experiences = 2;
 
-if( age >= 21 && age <= 35 ){
+if (age >= 21 && age <= 35) {
     console.log('age passed')
 }
-else{
+else {
     console.log('Age too young or too old for the post')
 }
 
-if(isDegree == true ){
+if (isDegree == true) {
     console.log('has degree')
 }
 
-else{
-        console.log('No degree')
-    }
+else {
+    console.log('No degree')
+}
 
-if(experiences >= 2) {
+if (experiences >= 2) {
     console.log('Has Experiences')
 }
 
-else{
+else {
     console.log('no experiences')
 }
 
-if(age >= 21 && age <= 35 && isDegree == true && experiences >= 2){
+if (age >= 21 && age <= 35 && isDegree == true && experiences >= 2) {
     console.log('Selected')
 }
 
-else{
+else {
     console.log('Not Selected')
 }
 
@@ -167,10 +167,10 @@ var viva = 20;
 var project = 24;
 
 // Explicit parentheses for clarity
-if( (written >= 40 && viva >= 20) || (project >= 25) ){
+if ((written >= 40 && viva >= 20) || (project >= 25)) {
     console.log('Pass')
 }
-else{
+else {
     console.log('Fail')
 }
 
@@ -187,11 +187,11 @@ var income = 60000;
 var isPermanentJob = true;
 var hasProperty = false;
 
-if((age >= 25 && age <=60) && (income >= 30000) && (isPermanentJob || hasProperty)){
+if ((age >= 25 && age <= 60) && (income >= 30000) && (isPermanentJob || hasProperty)) {
     console.log('Loan Approved')
-} 
+}
 
-else{
+else {
     console.log('Loan Denied')
 }
 
@@ -207,19 +207,19 @@ else{
 var is_VIP = false;
 var shop = 1999;
 
-if( (is_VIP || shop >= 5000) ){
+if ((is_VIP || shop >= 5000)) {
     console.log('Free Delivery')
 }
 
-else if( shop >= 2000 && shop <= 4999){
+else if (shop >= 2000 && shop <= 4999) {
     console.log('Delivery Charge 50 Taka')
 }
 
-else if(shop <= 2000){
+else if (shop <= 2000) {
     console.log('Delivery Charge 100 Taka Only')
 }
 
-else{
+else {
     console.log('Invalid')
 }
 
@@ -235,15 +235,15 @@ var student = 3.8;
 var age = 21;
 var isNationalLvlW = true;
 
-if(student >= 3.8 && age >= 22){
+if (student >= 3.8 && age >= 22) {
     console.log('Scholarship Granted')
 }
 
-else if(student >= 3.5 && isNationalLvlW){
+else if (student >= 3.5 && isNationalLvlW) {
     console.log('Scholarship Granted')
 }
 
-else{
+else {
     console.log('Not Eligible')
 }
 
@@ -264,32 +264,32 @@ let salary = 55000;
 var experience = 10;
 let bonous = 0;
 
-if(experience >= 10){
+if (experience >= 10) {
     bonous = salary * 20 / 100
 }
 
-else if(experience >= 5 && experience <= 9){
+else if (experience >= 5 && experience <= 9) {
     bonous = salary * 10 / 100
 }
 
-else if(experience >=2 && experience <= 4){
+else if (experience >= 2 && experience <= 4) {
     bonous = salary * 5 / 100
-    }
+}
 
 
-else{
-   bonous = "No Bonous"
+else {
+    bonous = "No Bonous"
 }
 
 let totalSalary = salary + bonous;
 
 
 
-if(totalSalary > 50000){
+if (totalSalary > 50000) {
     console.log("High Salary")
 }
 
-else{
+else {
     console.log('Normal Salary')
 }
 
@@ -305,7 +305,7 @@ else{
 // সবশেষে, যদি total bill > 2000 হয় → 5% surcharge যোগ হবে।
 
 
-let unit = 250;  
+let unit = 250;
 let totalBill = 0;
 
 if (unit <= 100) {
@@ -341,10 +341,10 @@ if (uunit <= 50) {
     TotalTaka = uunit * 7;
 }
 else if (uunit > 50 && uunit <= 150) {
-    TotalTaka =  (uunit * 10) - TotalTaka;
+    TotalTaka = (uunit * 10) - TotalTaka;
 }
 
-else if (uunit > 150){
+else if (uunit > 150) {
     TotalTaka = (uunit * 15) - TotalTaka;
 }
 
@@ -353,3 +353,33 @@ console.log(`Total Bill is ${TotalTaka}`);
 if (TotalTaka > 3000) {
     TotalTaka = TotalTaka + (TotalTaka * 10 / 100);
 }
+
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// #########   MAP Filter & ForEach ####################
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+const products = [
+    { id: 1, name: "Shirt", price: 1200, discount: 200, category: "clothing", stock: 12 },
+    { id: 2, name: "Shoe", price: 2500, discount: 500, category: "footwear", stock: 0 },
+    { id: 3, name: "Cap", price: 800, discount: 100, category: "accessory", stock: 20 },
+    { id: 4, name: "Pant", price: 1800, discount: 300, category: "clothing", stock: 5 },
+    { id: 5, name: "Watch", price: 3500, discount: 700, category: "accessory", stock: 0 }
+];
+
+// All products price
+
+const product = products.map(product => product.price - product.discount);
+
+const result = products.slice(0, 2).map(product => ({ name: product.name, finalPrice: product.price - product.discount }))
+
+const stock = products.filter(product => {
+    if (product.stock > 0) {
+        return product.name;
+    }
+})
+
+console.log(product);
+console.log(result);
+console.log(stock);
