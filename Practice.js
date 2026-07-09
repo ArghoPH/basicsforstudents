@@ -404,6 +404,15 @@ products.forEach(product => tot += product.price - product.discount);
 
 const cat = products.filter(product => product.category === "clothing").map(product => product.name).join(", "); // join( separator ) array-এর সব item কে একসাথে করে string বানায়।
 
+// forEach() দিয়ে শুধু available product names আলাদা array-তে push করো
+
+const available = [];
+
+products.forEach(product => {
+    if (product.stock > 0) {
+        available.push(product.name)
+    }
+});
 
 console.log(product);
 console.log(result);
@@ -413,4 +422,5 @@ console.log(status);
 console.log(total);
 console.log(tot);
 console.log(cat);
+console.log(available);
 
