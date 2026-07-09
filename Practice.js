@@ -406,13 +406,14 @@ const cat = products.filter(product => product.category === "clothing").map(prod
 
 // forEach() দিয়ে শুধু available product names আলাদা array-তে push করো
 
-const available = [];
+const available = []; // এখানে একটা empty array বানানো হয়েছে, এখনো এর ভিতরে কিছু নাই।
 
 products.forEach(product => {
     if (product.stock > 0) {
-        available.push(product.name)
+        available.push(product.name) // যদি stock থাকে, তাহলে product-এর name available array তে add করবে। push() হলো JavaScript array method, যেটা array-এর শেষে নতুন item add করে।
     }
 });
+
 
 console.log(product);
 console.log(result);
@@ -423,4 +424,3 @@ console.log(total);
 console.log(tot);
 console.log(cat);
 console.log(available);
-
