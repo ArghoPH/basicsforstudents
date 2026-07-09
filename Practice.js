@@ -424,3 +424,39 @@ console.log(total);
 console.log(tot);
 console.log(cat);
 console.log(available);
+
+// Order Management 
+
+const orders = [
+    { id: 101, customer: "Rohan", total: 1800, paid: true, city: "Dhaka", items: 2 },
+    { id: 102, customer: "Hasan", total: 2500, paid: false, city: "Chittagong", items: 1 },
+    { id: 103, customer: "Karim", total: 4300, paid: true, city: "Dhaka", items: 2 },
+    { id: 104, customer: "Nayeem", total: 1800, paid: false, city: "Sylhet", items: 1 },
+    { id: 105, customer: "Sakib", total: 7200, paid: true, city: "Dhaka", items: 3 }
+];
+
+// শুধু paid orders বের করা
+const paid = orders.filter(order => order.paid).map(order => order.customer);
+
+// unpaid customer names বের করা
+
+const unpaid = orders.filter(order => order.paid === false).map(order => order.customer);
+
+// Dhaka city-এর orders বের করা
+
+const dhaka = orders.filter(order => order.city === "Dhaka").map(order => order.customer);
+
+// forEach() দিয়ে Dhaka city-এর total sales calculate
+
+let totalDhaka = 0;
+
+orders.filter(order => {
+    if (order.city === "Dhaka" && order.paid) {
+        totalDhaka += order.total;
+    }
+})
+
+console.log(paid);
+console.log(unpaid);
+console.log(dhaka);
+console.log(totalDhaka);
