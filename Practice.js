@@ -383,9 +383,19 @@ const res = products
     .filter(product => product.stock > 0 && product.price - product.discount > 1000)
     .map(product => product.name);
 
+
+// সব product-এর stock status বানাও
+
+const status = products.map(product => ({      // map() diye prottek product theke notun object banacchi  function => ({ eta holo obejct bananor niyom r er vetore code hobe jegula object hobe })  ) ; 
+    product: product.name,
+    status: product.stock > 0 ? "Available" : "Out of stock"
+}));
+
+
 console.log(product);
 console.log(result);
 console.log(stock);
 console.log(res);
+console.log(status);
 
 
