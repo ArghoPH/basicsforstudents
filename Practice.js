@@ -456,7 +456,13 @@ orders.filter(order => {
     }
 })
 
+
+//  প্রতিটা order-এর payment status text
+
+const resultstatus = orders.map(order => order.customer + " -" + (order.paid ? "Paid" : "Unpaid")); // () eta tokhonoi use korba jokhon mone korba ei calculate age howa uchit nahole age age string banale golabarud hobe
+
 console.log(paid);
 console.log(unpaid);
 console.log(dhaka);
 console.log(totalDhaka);
+console.log(resultstatus);
