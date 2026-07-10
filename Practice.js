@@ -487,7 +487,7 @@ let unpaids = 0;
 orders.forEach(order => !order.paid && (unpaids += order.total)); // ! = false
 
 
-// final report s
+// final report
 
 const final = orders.map(order => order.customer + " ordered " + order.items + " items from " + order.city + " " + (order.paid ? "Paid" : "Unpaid"));
 
