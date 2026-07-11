@@ -499,5 +499,4 @@ console.log(resultstatus);
 console.log(highOrder);
 console.log(highcustom);
 console.log(totals);
-console.log(unpaids);
-console.log(final);
+
