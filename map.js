@@ -930,11 +930,13 @@ console.log(advancedOrders[0].items[0])
 // });
 
 // nested function
-advancedOrders.forEach(order => order.items.forEach(item => {
+advancedOrders
+    .forEach(order => order.items
+        .forEach(item => {
 
-    console.log(item.productId);
-    console.log(item.quantity);
-}))
+            console.log(item.productId);
+            console.log(item.quantity);
+        }))
 
 // প্রত্যেক order-এর product ID বের করা
 const productIds = advancedOrders.map(order => {
