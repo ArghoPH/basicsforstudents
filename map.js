@@ -920,3 +920,11 @@ advancedOrders[0].items    // প্রথম order-এর items array
 advancedOrders[0].items[0] // প্রথম item
 
 console.log(advancedOrders[0].items[0])
+
+// প্রত্যেক order-এর ভেতরের items দেখানো
+advancedOrders.forEach(order => {
+    order.items.forEach(item => {
+        console.log(item.productId);
+        console.log(item.quantity);
+    });
+});
