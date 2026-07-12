@@ -913,3 +913,10 @@ const advancedOrders = [
         paid: true
     }
 ];
+
+advancedOrders             // সব orders
+advancedOrders[0]          // প্রথম order
+advancedOrders[0].items    // প্রথম order-এর items array
+advancedOrders[0].items[0] // প্রথম item
+
+console.log(advancedOrders[0].items[0])
