@@ -964,13 +964,13 @@ advancedOrders[0].items[0] // প্রথম item
 // // আলাদা লাইনে 1 এবং 3 দেখাতে:
 // console.log(productIds.join("\n"));
 
-// const productsa = advancedOrders.flatMap(order => order.items.map(item => item.productId));
+const productsa = advancedOrders.flatMap(order => order.items.map(item => item.productId));
 
 const productsb = advancedOrders.flatMap(
     order => order.items.map(item => item.productId)
 );
 
-const productsa = advancedOrders
+const productsc = advancedOrders
     .flatMap(order => order.items.map(item => item.productId))
     .join(", ");
 
