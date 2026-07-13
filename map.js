@@ -966,4 +966,16 @@ advancedOrders[0].items[0] // প্রথম item
 
 const productsa = advancedOrders.flatMap(order => order.items.map(item => item.productId));
 
+const productsb = advancedOrders.flatMap(
+    order => order.items.map(item => item.productId)
+);
+
+const productsa = advancedOrders
+    .flatMap(order => order.items.map(item => item.productId))
+    .join(", ");
+
+console.log(productsc); // '1, 3'
+
 console.log(productsa);
+console.log(productsb);
+console.log(productsc);
