@@ -919,47 +919,51 @@ advancedOrders[0]          // প্রথম order
 advancedOrders[0].items    // প্রথম order-এর items array
 advancedOrders[0].items[0] // প্রথম item
 
-console.log(advancedOrders[0].items[0])
+// console.log(advancedOrders[0].items[0])
 
-// প্রত্যেক order-এর ভেতরের items দেখানো
-// advancedOrders.forEach(order => {
-//     order.items.forEach(item => {
-//         console.log(item.productId);
-//         console.log(item.quantity);
-//     });
-// });
+// // প্রত্যেক order-এর ভেতরের items দেখানো
+// // advancedOrders.forEach(order => {
+// //     order.items.forEach(item => {
+// //         console.log(item.productId);
+// //         console.log(item.quantity);
+// //     });
+// // });
 
-// nested function
-advancedOrders
-    .forEach(order => order.items
-        .forEach(item => {
+// // nested function
+// advancedOrders
+//     .forEach(order => order.items
+//         .forEach(item => {
 
-            console.log(item.productId);
-            console.log(item.quantity);
-        }))
+//             console.log(item.productId);
+//             console.log(item.quantity);
+//         }))
 
-// প্রত্যেক order-এর product ID বের করা
-const productIds = advancedOrders.map(order => {
-    return order.items.map(item => {
-        return item.productId;
-    });
-});
+// // প্রত্যেক order-এর product ID বের করা
+// // const productIds = advancedOrders.map(order => {
+// //     return order.items.map(item => {
+// //         return item.productId;
+// //     });
+// // });
 
-// Outer map → একটি array
-// Inner map → আরেকটি array
-// Result → array-এর ভেতরে array
+// // Outer map → একটি array
+// // Inner map → আরেকটি array
+// // Result → array-এর ভেতরে array
 
-console.log(productIds.join(", "));
+// console.log(productIds.join(", "));
 
-// map() এর কারণে nested array হচ্ছে: [[1, 3]]। এটাকে flat করতে flatMap() ব্যবহার 
-const productIds = advancedOrders.flatMap(order =>
-    order.items.map(item => item.productId)
-);
+// // map() এর কারণে nested array হচ্ছে: [[1, 3]]। এটাকে flat করতে flatMap() ব্যবহার 
+// const productIds = advancedOrders.flatMap(order =>
+//     order.items.map(item => item.productId)
+// );
 
-console.log(productIds); // [1, 3]
+// console.log(productIds); // [1, 3]
 
-// 1, 3 এভাবে দেখাতে
-console.log(productIds.join(", ")); // 1, 3 
+// // 1, 3 এভাবে দেখাতে
+// console.log(productIds.join(", ")); // 1, 3 
 
-// আলাদা লাইনে 1 এবং 3 দেখাতে:
-console.log(productIds.join("\n"));
+// // আলাদা লাইনে 1 এবং 3 দেখাতে:
+// console.log(productIds.join("\n"));
+
+const productsa = advancedOrders.map(order => order.items.map(item => item.productId).join(", "));
+
+console.log(productsa);
