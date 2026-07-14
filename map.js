@@ -1028,4 +1028,48 @@ const orders = [
 
 const user = users.map(user => user.name);
 
+const activeUser = users.filter(user => user.active).map(user => user.name)
+
+const product3 = products.find(product => product.id === 3);
+
+const trackingCode = orders.filter(order => order).map(order => order.trackingCode);
+
+const productid = orders.map(order => order.items).flat().map(order => order.productId);
+
+const paid = orders.filter(order => order.paid).map(order => order.id);
+
+// যেই order-এর ভিতরে productId 4 আছে, সেই order গুলো বের করো
+const orderSome = orders.some(order =>
+    order.items.some(item => item.productId === 4)
+);
+
+console.log(orderSome); // true
+
+
+// some() 
+// array-এর অন্তত একটা item শর্ত মানে কি?
+
+
+const ordersWithProduct4 = orders.filter(order =>
+    order.items.some(item => item.productId === 4)
+);
+
 console.log(user);
+console.log(activeUser);
+console.log(product3);
+console.log(trackingCode);
+console.log(productid);
+console.log(paid);
+console.log(ordersWithProduct4);
+
+
+const result = orders
+    .filter(order => order.items.some(item => item.productId === 4))
+    .flatMap(order => order.items)
+    .map(item => item.productId);
+
+console.log(result);
+
+const rest = orders.filter(order => order.items.some(order => order.productId === 4)).map(order => order.id).join(", ");
+
+console.log(rest);
