@@ -3,8 +3,8 @@ const computer = {
     price: 35000,
     processor: 'intel',
     hdd: '512 gb'
-},
+}
 
-    keys = Object.keys(computer)
+const values = Object.values(computer);
 
-console.log(keys);
+console.log(values);
