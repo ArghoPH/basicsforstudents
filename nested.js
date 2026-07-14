@@ -9,4 +9,20 @@ const orders = [
         ],
         paid: true
     },
+    {
+        id: 7002,
+        trackingCode: "ADV-1002",
+        userId: 102,
+        items: [
+            { productId: 654641, quantity: 1 },
+            { productId: 323321, quantity: 2 }
+        ],
+        paid: false
+    },
 ]
+
+console.log(orders);
+console.dir(orders, { depth: null });
+
+console.log(Array.isArray(orders));
+console.log(Object.keys(orders[0] ?? {}));
