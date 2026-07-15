@@ -54,6 +54,9 @@ const productid1 = orders.filter(order => order.items.some(item => item.productI
 
 const again = orders.filter(order => order.items.some(item => item.productId === 2)).map(order => order.id);
 
+const result = orders.filter(order => order.paid === false).map(order => order.id);
+
 console.log(trackingcd);
 console.log(productid);
 console.log(productid1);
+console.log(result);
