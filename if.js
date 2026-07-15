@@ -1,6 +1,6 @@
 var weight = 80;
 
-if (weight <= 55 ){
+if (weight <= 55) {
     console.log("vai jitsen")
 }
 
