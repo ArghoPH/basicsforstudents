@@ -54,5 +54,4 @@ const productid1 = orders.filter(order => order.items.some(item => item.productI
 
 console.log(trackingcd);
 console.log(productid);
-
 console.log(productid1);
