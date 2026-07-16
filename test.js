@@ -58,6 +58,5 @@ const result = orders.filter(order => order.paid === false).map(order => order.i
 
 console.log(trackingcd);
 console.log(productid);
-
 console.log(productid1);
 console.log(result);
