@@ -1150,9 +1150,20 @@
 
 // console.log(result)
 
-const prices = [100, 250, 300, 150];
+// const prices = [100, 250, 300, 150];
 
-const result = prices.reduce((total, number) => total + number, 0);
+// const result = prices.reduce((total, number) => total + number, 0);
 
 
-console.log(result)
+// console.log(result);
+
+
+const products = [
+    { name: "Shirt", price: 1200 },
+    { name: "Shoe", price: 2500 },
+    { name: "Cap", price: 800 }
+];
+
+const result = products.reduce((total, number) => total + number.price, 0);
+
+console.log(result);
