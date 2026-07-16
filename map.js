@@ -1138,6 +1138,21 @@
 // console.log(totalStock);
 
 
-products.reduce((total, currentProduct) => {
-    return total + currentProduct.price;
-}, 0);
+// products.reduce((total, currentProduct) => {
+//     return total + currentProduct.price;
+// }, 0);
+
+// const numbers = [10, 20, 30, 40];
+
+// const result = numbers.reduce((a, b) => {
+//     return a + b;
+// }, 0);
+
+// console.log(result)
+
+const prices = [100, 250, 300, 150];
+
+const result = prices.reduce((total, number) => total + number, 0);
+
+
+console.log(result)
