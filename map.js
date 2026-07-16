@@ -1166,4 +1166,25 @@ const products = [
 
 const result = products.reduce((total, number) => total + number.price, 0);
 
+products.map(product => product.map);
+
 console.log(result);
+
+//regular
+function addPrice(total, product) {
+    return total + product.price;
+}
+const result = products.reduce(addPrice, 0);
+
+// normal
+const result = products.reduce(function (total, product) {
+    return total + product.price;
+}, 0);
+
+// short
+const result = products.reduce((total, product) => {
+    return total + product.price;
+}, 0);
+
+//shortest
+const result = products.reduce((total, product) => total + product.price, 0);
