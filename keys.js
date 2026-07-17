@@ -3,7 +3,6 @@ const computer = {
     price: 35000,
     processor: 'intel',
     hdd: '512 gb',
-    stock: 4,
     
 },
 
