@@ -1436,3 +1436,47 @@
 
 // console.log(result); 
 
+const project = [
+    {
+        id: 1,
+        name: "Project A",
+        task: "Design"
+    },
+     {
+        id: 2,
+        name: "Project B",
+        task: "Development"
+    },
+     {
+        id: 3,
+        name: "Project C",
+        task: "array"
+    },
+     {
+        id: 4,
+        name: "Project D",
+        task: "core"
+    },
+] 
+
+const tasks = project.map(project => project.task );
+
+const name =project.map(project => project.name );
+
+const nameandTask = project.map(project => project.name + " - " + project.task);
+
+const result = project.map(project => {
+    return {
+        id: project.id,
+        name: project.name,
+        task: project.task
+    };
+});
+
+const result2 = project.map(project => project.id);
+
+console.log(tasks);
+console.log(name);
+console.log(nameandTask);
+console.log(result);
+console.log(result2);
