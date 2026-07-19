@@ -1485,8 +1485,7 @@ const result = orders.reduce((highestAmount, order, index) => {
             : highestAmount;
     }
 
-    return highestAmount; s
-
+    return highestAmount;
 }, 0);
 
 console.log(result); 
