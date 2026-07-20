@@ -1731,15 +1731,18 @@ const orders = [
 // console.log(totalRevenue); // 14520
 
 
-const catagoryRevenue = orders.reduce((catagory, total) => {
-    if (!total.paid || total.cancelled) {
-        return catagory
-    };
+// const catagoryRevenue = orders.reduce((catagory, total) => {
+//     if (!total.paid || total.cancelled) {
+//         return catagory
+//     };
 
-    const totals = orders.items.reduce(
-        (total, category) => total + item.catagory, 0);
+//     const totals = orders.items.reduce(
+//         (total, category) => total + item.catagory, 0);
 
 
-})
+// })
 
-console.log(catagoryRevenue);
+// console.log(catagoryRevenue);
+
+//Level 1 Only total
+
