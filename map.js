@@ -2012,3 +2012,41 @@ const result = orders.reduce((grandTotal, order) => {
 }, 0);
 
 console.log(result);
+
+// without {} 
+const result = orders.reduce(
+    (grandTotal, order) =>
+        grandTotal +
+        order.items.reduce(
+            (total, item) => total + item.price,
+            0
+        ),
+    0
+);
+
+console.log(result);
+
+//short 
+const result = orders.reduce((grandTotal, order) => grandTotal + order.items.reduce((total, item) => total + item.price, 0), 0);
+
+//suggested concise version
+const result = orders.reduce((grandTotal, order) => {
+    const orderTotal = order.items.reduce(
+        (total, item) => total + item.price,
+        0
+    );
+
+    return grandTotal + orderTotal;
+}, 0);
+
+// suggest best 
+const totalPrice = orders.reduce((grandTotal, order) => {
+    const orderTotal = order.items.reduce(
+        (itemTotal, item) => itemTotal + item.price,
+        0
+    );
+
+    return grandTotal + orderTotal;
+}, 0);
+
+console.log(totalPrice); // only improving naming
