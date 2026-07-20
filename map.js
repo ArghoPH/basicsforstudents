@@ -1831,9 +1831,103 @@
 // console.log(result);
 
 
+// const products = [
+//     { name: "Shirt", price: 1200, stock: 5 },
+//     { name: "Shoe", price: 2500, stock: 0 },
+//     { name: "Cap", price: 800, stock: 3 }
+// ];
+
+// // সব product-এর মধ্যে শুধু যেগুলোর stock ache segula ber korte hobe
+
+// const result = products.reduce((total, product) => {
+//     if (product.stock === 0) {
+//         return total;
+//     } else {
+//         return total + product.price;
+//     }
+// }, 0);
+
+// console.log(result);
+
+// //shortcut
+// array.reduce((total, item) => {
+//     if (condition not match) {
+//     return total;
+// }
+
+// return total + value;
+// }, 0);
+
+// //object array
+// array.reduce((total, object) => {
+//     if (object.condition) {
+//         return total;
+//     }
+
+//     return total + object.property;
+// }, 0);
+
+
+// const products = [
+//     { name: "Laptop", price: 50000, stock: 2 },
+//     { name: "Mouse", price: 1200, stock: 0 },
+//     { name: "Keyboard", price: 2500, stock: 5 },
+//     { name: "Monitor", price: 18000, stock: 1 },
+//     { name: "Speaker", price: 4000, stock: 0 }
+// ];
+
+// const result = products.reduce((total, product) => product.stock === 0 ? total : total + product.price, 0);
+
+// console.log(result);
+
 const products = [
-    { name: "Shirt", price: 1200, stock: 5 },
-    { name: "Shoe", price: 2500, stock: 0 },
-    { name: "Cap", price: 800, stock: 3 }
+    {
+        name: "Laptop",
+        price: 50000,
+        quantity: 2,
+        stock: 2,
+        active: true
+    },
+    {
+        name: "Mouse",
+        price: 1200,
+        quantity: 3,
+        stock: 0,
+        active: true
+    },
+    {
+        name: "Keyboard",
+        price: 2500,
+        quantity: 2,
+        stock: 5,
+        active: false
+    },
+    {
+        name: "Monitor",
+        price: 18000,
+        quantity: 1,
+        stock: 1,
+        active: true
+    },
+    {
+        name: "Headphone",
+        price: 3500,
+        quantity: 4,
+        stock: 7,
+        active: true
+    }
 ];
 
+
+// const result = products.reduce((total, product) => {
+//     if (product.stock === 0 || !product.active) {
+//         return total
+//     } else {
+//         return total + product.price * product.quantity
+//     }
+// }, 0); // 0 na dile 1st number ta accumulator hobe
+
+
+const result = products.reduce((total, product) => product.stock > 0 && product.active ? total + product.price * product.quantity : total, 0);
+
+console.log(result);
