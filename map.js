@@ -1491,3 +1491,46 @@
 
 // console.log(result); 
 
+const orders = [
+    {
+        id: 1,
+        price: 1200,
+        quantity: 2,
+        discount: 10,
+        deliveryFee: 100,
+        paid: true,
+        cancelled: false
+    },
+    {
+        id: 2,
+        price: 2500,
+        quantity: 1,
+        discount: 20,
+        deliveryFee: 0,
+        paid: false,
+        cancelled: false
+    },
+    {
+        id: 3,
+        price: 800,
+        quantity: 3,
+        discount: 0,
+        deliveryFee: 80,
+        paid: true,
+        cancelled: false
+    },
+    {
+        id: 4,
+        price: 1500,
+        quantity: 2,
+        discount: 10,
+        deliveryFee: 100,
+        paid: true,
+        cancelled: true
+    }
+];
+
+
+const result = orders.filter(order => (order.paid && !order.cancelled)).map(order => ((order.price * order.quantity) - (order.price * order.quantity) * order.discount / 100) + order.deliveryFee).reduce((total, amount) => total + amount, 0);
+
+console.log(result);
