@@ -2049,4 +2049,5 @@ const totalPrice = orders.reduce((grandTotal, order) => {
     return grandTotal + orderTotal;
 }, 0);
 
+
 console.log(totalPrice); // only improving naming
