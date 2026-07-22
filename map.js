@@ -2256,4 +2256,4 @@ const result = schools.reduce((totalSchools, school) => {
     return totalSchools + classTotal;
 }, 0);
 
-console.log(result); // continue testing
+console.log(result); // continue testing no 
