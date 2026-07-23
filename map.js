@@ -2697,3 +2697,153 @@
 // console.log(totalStores);
 
 
+const stores = [
+    {
+        name: "Store A",
+        active: true,
+        platformFee: 200,
+        categories: [
+            {
+                name: "Electronics",
+                active: true,
+                serviceFee: 100,
+                products: [
+                    {
+                        name: "Phone",
+                        price: 12000,
+                        soldQuantity: 2,
+                        discount: 10,
+                        stock: 5,
+                        available: true
+                    },
+                    {
+                        name: "Mouse",
+                        price: 800,
+                        soldQuantity: 3,
+                        discount: 0,
+                        stock: 10,
+                        available: false
+                    }
+                ]
+            },
+            {
+                name: "Accessories",
+                active: false,
+                serviceFee: 50,
+                products: [
+                    {
+                        name: "Bag",
+                        price: 1500,
+                        soldQuantity: 2,
+                        discount: 0,
+                        stock: 4,
+                        available: true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Store B",
+        active: true,
+        platformFee: 100,
+        categories: [
+            {
+                name: "Home",
+                active: true,
+                serviceFee: 150,
+                products: [
+                    {
+                        name: "Lamp",
+                        price: 1200,
+                        soldQuantity: 4,
+                        discount: 5,
+                        stock: 6,
+                        available: true
+                    },
+                    {
+                        name: "Chair",
+                        price: 2500,
+                        soldQuantity: 2,
+                        discount: 0,
+                        stock: 3,
+                        available: true
+                    }
+                ]
+            },
+            {
+                name: "Office",
+                active: true,
+                serviceFee: 0,
+                products: [
+                    {
+                        name: "Desk",
+                        price: 4000,
+                        soldQuantity: 1,
+                        discount: 10,
+                        stock: 1,
+                        available: true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Store C",
+        active: false,
+        platformFee: 500,
+        categories: [
+            {
+                name: "Clothing",
+                active: true,
+                serviceFee: 100,
+                products: [
+                    {
+                        name: "Shirt",
+                        price: 1000,
+                        soldQuantity: 10,
+                        discount: 0,
+                        stock: 15,
+                        available: true
+                    }
+                ]
+            }
+        ]
+    }
+];
+
+// const totalAmont = stores.reduce((totalStores, store) => {
+//     const totalCategory = store.categories.reduce((totalCategory, category) =>{
+//         const totalProdcts = category.products.reduce((totalProdcts, product) => {
+//             if (product.stock > 0 && product.available) {
+//                 return totalProdcts + product.price * product.soldQuantity * (1 - product.discount / 100);
+//             } return totalProdcts;
+//         }, 0);
+//         if (category.active) {
+//             return totalCategory + totalProdcts - category.serviceFee;
+//         } return totalCategory;
+//     }, 0);
+//     if (store.active) {
+//         return totalStores + totalCategory - store.platformFee;
+//     } return totalStores;
+// }, 0);
+
+// console.log(totalAmont);
+
+const totalAmount = stores.reduce((totalStores, store) => {
+    const totalCategories = store.categories.reduce((totalCategories, category) => {
+        const totalProducts = category.products.reduce((totalProducts, product) => {
+            if (product.available && product.stock > 0) {
+                return totalProducts + product.price * product.soldQuantity * (1 - product.discount / 100);
+            } return totalProducts;
+        }, 0);
+        if (category.active) {
+            return totalCategories + totalProducts - category.serviceFee;
+        } return totalCategories;
+    }, 0);
+    if (store.active) {
+        return totalStores + totalCategories - store.platformFee;
+    } return totalStores;
+}, 0);  
+
+console.log(totalAmount);

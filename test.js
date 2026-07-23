@@ -7,7 +7,7 @@ const users = [
 
 const products = [
     { id: 1, name: "T-Shirt", price: 500, stock: 20, category: "clothing" },
-    { id: 2, name: "Shoe", price: 2500, stock: 0, category: "footwear" },
+    { id: 2, name: "Shoe", price: 2500, stock: 0, category: "footwear" },     
     { id: 3, name: "Watch", price: 1800, stock: 5, category: "accessory" },
     { id: 4, name: "Bag", price: 1200, stock: 10, category: "accessory" },
     { id: 5, name: "Pant", price: 900, stock: 0, category: "clothing" }
