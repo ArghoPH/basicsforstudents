@@ -2293,6 +2293,14 @@ const schools = [
     }
 ];
 
-const result = schools.reduce((totalSchool, school) => {
-    const totalSchool = school.reduce((totalClass))
-})
+const result = schools.reduce((evclass, school) => {
+    const totalClass = school.classes.reduce((totalClass, evclass) => {
+        const totalStudents = evclass.students.reduce((totalStudents, student) => {
+            return totalStudents + student.marks
+        }, 0);
+        return totalClass + totalStudents
+    }, 0);
+    return evclass + totalClass
+}, 0);
+
+console.log(result);
