@@ -2697,3 +2697,395 @@
 // console.log(totalStores);
 
 
+const marketplaces = [
+    {
+        name: "Marketplace A",
+        active: true,
+        platformFee: 200,
+        shops: [
+            {
+                name: "Alpha Shop",
+                active: true,
+                serviceFee: 100,
+                orders: [
+                    {
+                        id: "A-101",
+                        status: "completed",
+                        items: [
+                            {
+                                name: "Phone",
+                                price: 10000,
+                                quantity: 2,
+                                discountPercent: 10,
+                                taxPercent: 5,
+                                stock: 5,
+                                available: true,
+                                returned: false
+                            },
+                            {
+                                name: "Mouse",
+                                price: 1000,
+                                quantity: 3,
+                                discountPercent: 0,
+                                taxPercent: 5,
+                                stock: 2,
+                                available: true,
+                                returned: false
+                            }
+                        ]
+                    },
+                    {
+                        id: "A-102",
+                        status: "pending",
+                        items: [
+                            {
+                                name: "Keyboard",
+                                price: 2000,
+                                quantity: 2,
+                                discountPercent: 10,
+                                taxPercent: 5,
+                                stock: 5,
+                                available: true,
+                                returned: false
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: "Beta Shop",
+                active: false,
+                serviceFee: 50,
+                orders: [
+                    {
+                        id: "A-103",
+                        status: "completed",
+                        items: [
+                            {
+                                name: "Monitor",
+                                price: 15000,
+                                quantity: 1,
+                                discountPercent: 10,
+                                taxPercent: 5,
+                                stock: 2,
+                                available: true,
+                                returned: false
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Marketplace B",
+        active: true,
+        platformFee: 150,
+        shops: [
+            {
+                name: "Gamma Shop",
+                active: true,
+                serviceFee: 80,
+                orders: [
+                    {
+                        id: "B-201",
+                        status: "completed",
+                        items: [
+                            {
+                                name: "Chair",
+                                price: 2500,
+                                quantity: 2,
+                                discountPercent: 0,
+                                taxPercent: 10,
+                                stock: 5,
+                                available: true,
+                                returned: false
+                            },
+                            {
+                                name: "Lamp",
+                                price: 1200,
+                                quantity: 4,
+                                discountPercent: 5,
+                                taxPercent: 0,
+                                stock: 10,
+                                available: true,
+                                returned: false
+                            }
+                        ]
+                    },
+                    {
+                        id: "B-202",
+                        status: "completed",
+                        items: [
+                            {
+                                name: "Desk",
+                                price: 4000,
+                                quantity: 1,
+                                discountPercent: 20,
+                                taxPercent: 5,
+                                stock: 1,
+                                available: true,
+                                returned: false
+                            },
+                            {
+                                name: "Returned Table",
+                                price: 5000,
+                                quantity: 1,
+                                discountPercent: 10,
+                                taxPercent: 5,
+                                stock: 3,
+                                available: true,
+                                returned: true
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                name: "Delta Shop",
+                active: true,
+                serviceFee: 50,
+                orders: [
+                    {
+                        id: "B-203",
+                        status: "completed",
+                        items: [
+                            {
+                                name: "Notebook",
+                                price: 400,
+                                quantity: 5,
+                                discountPercent: 10,
+                                taxPercent: 5,
+                                stock: 5,
+                                available: true,
+                                returned: false
+                            },
+                            {
+                                name: "Pen",
+                                price: 50,
+                                quantity: 10,
+                                discountPercent: 0,
+                                taxPercent: 0,
+                                stock: 20,
+                                available: false,
+                                returned: false
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Marketplace C",
+        active: false,
+        platformFee: 500,
+        shops: [
+            {
+                name: "Omega Shop",
+                active: true,
+                serviceFee: 100,
+                orders: [
+                    {
+                        id: "C-301",
+                        status: "completed",
+                        items: [
+                            {
+                                name: "Bag",
+                                price: 3000,
+                                quantity: 3,
+                                discountPercent: 10,
+                                taxPercent: 5,
+                                stock: 5,
+                                available: true,
+                                returned: false
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+];
+
+// const totalMarketPlaces = marketplaces.reduce((totalMarketPlaces, marketPlace) => {
+//     const totalShops = marketPlace.shops.reduce((totalShops, shop) => {
+//         const totalOrders = shop.orders.reduce((totalOrders, order) => {
+//             const totalItems = order.items.reduce((totalItems, item) => {
+//                 if (!item.available || item.returned && item.stock > 0) {
+//                     return totalItems;
+//                 }
+//                 const grossAmount = totalItems + item.price * item.quantity
+//                 const totalDiscount = totalItems + item.price * item.quantity * (1 - item.discountPercent / 100);
+//                 const totalTax = totalItems + item.price * item.quantity * (1 - item.taxPercent / 100);
+//                 return totalItems;
+//             }, 0);
+//             if (order.status === "completed") {
+//                 return totalOrders + totalItems;
+//             } return totalOrders;
+//         }, 0);
+//         if (!shop.active) {
+//             return totalShops;
+//         } return totalShops + totalOrders;
+//     }, 0);
+//     if (!marketPlace.active) {
+//         return totalMarketPlaces;
+//     } return totalMarketPlaces + totalShops;
+// }, 0);
+
+const totalMarketPlaces = marketplaces.reduce((totalMarketPlaces, marketPlace) => {
+    if (marketPlace.active) {
+        const totalShops = marketPlace.shops.reduce((totalShops, shop) => {
+            if (shop.active) {
+                const totalOrders = shop.orders.reduce((totalOrders, order) => {
+                    if (order.status === "completed") {
+                        const totalItems = order.items.reduce(
+                            (totalItems, item) => {
+                                if (
+                                    item.available &&
+                                    !item.returned &&
+                                    item.stock >= item.quantity
+                                ) {
+                                    const grossAmount = item.price * item.quantity;
+                                    const discountAmount = grossAmount * item.discountPercent / 100;
+                                    const afterDiscount = grossAmount - discountAmount;
+
+                                    const taxAmount = afterDiscount * item.taxPercent / 100;
+
+                                    totalItems.grossAmount += grossAmount;
+
+                                    totalItems.totalDiscount += discountAmount;
+
+                                    totalItems.totalTax += taxAmount;
+
+                                    totalItems.validItemCount += 1;
+
+                                    return totalItems;
+                                }
+
+                                return totalItems;
+                            },
+                            {
+                                grossAmount: 0,
+                                totalDiscount: 0,
+                                totalTax: 0,
+                                totalFees: 0,
+                                validItemCount: 0,
+                                validOrderCount: 0
+                            }
+                        );
+
+                        totalOrders.grossAmount +=
+                            totalItems.grossAmount;
+
+                        totalOrders.totalDiscount +=
+                            totalItems.totalDiscount;
+
+                        totalOrders.totalTax +=
+                            totalItems.totalTax;
+
+                        totalOrders.validItemCount +=
+                            totalItems.validItemCount;
+
+                        if (totalItems.validItemCount > 0) {
+                            totalOrders.validOrderCount += 1;
+                        }
+
+                        return totalOrders;
+                    }
+
+                    return totalOrders;
+                },
+                    {
+                        grossAmount: 0,
+                        totalDiscount: 0,
+                        totalTax: 0,
+                        totalFees: 0,
+                        validItemCount: 0,
+                        validOrderCount: 0
+                    }
+                );
+
+                if (totalOrders.validItemCount > 0) {
+                    totalOrders.totalFees += shop.serviceFee;
+                }
+
+                totalShops.grossAmount +=
+                    totalOrders.grossAmount;
+
+                totalShops.totalDiscount +=
+                    totalOrders.totalDiscount;
+
+                totalShops.totalTax +=
+                    totalOrders.totalTax;
+
+                totalShops.totalFees +=
+                    totalOrders.totalFees;
+
+                totalShops.validItemCount +=
+                    totalOrders.validItemCount;
+
+                totalShops.validOrderCount +=
+                    totalOrders.validOrderCount;
+
+                return totalShops;
+            }
+
+            return totalShops;
+        },
+            {
+                grossAmount: 0,
+                totalDiscount: 0,
+                totalTax: 0,
+                totalFees: 0,
+                validItemCount: 0,
+                validOrderCount: 0
+            }
+        );
+
+        if (totalShops.validItemCount > 0) {
+            totalShops.totalFees +=
+                marketPlace.platformFee;
+        }
+
+        totalMarketPlaces.grossAmount +=
+            totalShops.grossAmount;
+
+        totalMarketPlaces.totalDiscount +=
+            totalShops.totalDiscount;
+
+        totalMarketPlaces.totalTax +=
+            totalShops.totalTax;
+
+        totalMarketPlaces.totalFees +=
+            totalShops.totalFees;
+
+        totalMarketPlaces.validItemCount +=
+            totalShops.validItemCount;
+
+        totalMarketPlaces.validOrderCount +=
+            totalShops.validOrderCount;
+
+        return totalMarketPlaces;
+    }
+
+    return totalMarketPlaces;
+},
+    {
+        grossAmount: 0,
+        totalDiscount: 0,
+        totalTax: 0,
+        totalFees: 0,
+        finalAmount: 0,
+        validItemCount: 0,
+        validOrderCount: 0
+    }
+);
+
+totalMarketPlaces.finalAmount =
+    totalMarketPlaces.grossAmount -
+    totalMarketPlaces.totalDiscount +
+    totalMarketPlaces.totalTax +
+    totalMarketPlaces.totalFees;
+
+console.log(totalMarketPlaces);
