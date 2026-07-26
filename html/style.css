@@ -1,0 +1,53 @@
+.color_red {
+    color: white;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.margin-left {
+    margin-left: 20px;
+}
+
+.padding {
+    padding: 10px;
+
+}
+
+.all {
+    margin: 0;
+}
+
+.padding-head {
+    padding: 50px;
+    background-color: blueviolet;
+}
+
+.margin-bottom {
+    margin-bottom: 10px;
+}
+
+.container {
+    padding: 50px;
+}
+
+.margin-zero {
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
+.baal {
+    color: blueviolet;
+}
