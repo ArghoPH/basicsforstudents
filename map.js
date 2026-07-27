@@ -3239,3 +3239,9 @@ totalMarketPlaces.finalAmount =
     totalMarketPlaces.totalFees;
 
 console.log(totalMarketPlaces);
+
+const products = [
+    { name: "Shirt", stock: 10 },
+    { name: "Shoe", stock: 0 },
+    { name: "Cap", stock: 5 }
+];
