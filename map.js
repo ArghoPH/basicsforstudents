@@ -3770,6 +3770,7 @@ const grandTotal = orders.reduce((acc, order) => {
 
 console.log(grandTotal);
 
+
 const orders2 = [
     {
         id: 201,
