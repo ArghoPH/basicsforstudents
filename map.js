@@ -3918,6 +3918,7 @@ const result2 = orders2.reduce((acc, order) => {
     }, acc);
 
     return acc;
+
 }, {});
 
 console.log(result2);
