@@ -3865,6 +3865,7 @@ const orders2 = [
 //                 totalQuantity: 0,
 //                 totalRevenue: 0
 //             };
+
 //         } return acc;
 
 
