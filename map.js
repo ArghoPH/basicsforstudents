@@ -3888,6 +3888,7 @@ const orders2 = [
 // console.log(result2);
 
 
+
 const result2 = orders2.reduce((acc, order) => {
     const isValid = order.approved && !order.cancelled;
 
