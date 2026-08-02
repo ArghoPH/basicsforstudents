@@ -3920,6 +3920,7 @@ const result2 = orders2.reduce((acc, order) => {
 
     return acc;
 
+    
 }, {});
 
 console.log(result2);
