@@ -3896,8 +3896,6 @@ const result2 = orders2.reduce((acc, order) => {
         return acc;
     }
 
-
-
     order.items.reduce((acc, item) => {
         const category = item.category;
 
