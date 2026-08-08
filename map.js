@@ -3905,6 +3905,7 @@ const result2 = orders2.reduce((acc, order) => {
                 totalQuantity: 0,
                 totalRevenue: 0
             };
+
         }
 
         const totalPrice = item.price * item.quantity;
@@ -3915,7 +3916,7 @@ const result2 = orders2.reduce((acc, order) => {
         acc[category].totalQuantity += item.quantity;
         acc[category].totalRevenue += finalAmount;
 
-        
+
         return acc;
     }, acc);
 
