@@ -453,6 +453,7 @@ let totalDhaka = 0;
 
 orders.filter(order => {
     if (order.city === "Dhaka" && order.paid) {
+
         totalDhaka += order.total;
     }
 })
