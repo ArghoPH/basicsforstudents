@@ -432,7 +432,8 @@ const orders = [
     { id: 102, customer: "Hasan", total: 2500, paid: false, city: "Chittagong", items: 1 },
     { id: 103, customer: "Karim", total: 4300, paid: true, city: "Dhaka", items: 2 },
     { id: 104, customer: "Nayeem", total: 1800, paid: false, city: "Sylhet", items: 1 },
-    { id: 105, customer: "Sakib", total: 7200, paid: true, city: "Dhaka", items: 3 }
+    { id: 105, customer: "Sakib", total: 7200, paid: true, city: "Dhaka", items: 3 },
+
 ];
 
 // শুধু paid orders বের করা
