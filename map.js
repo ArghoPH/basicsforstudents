@@ -3914,6 +3914,7 @@ const result2 = orders2.reduce((acc, order) => {
 
         acc[category].productCount += 1;
         acc[category].totalQuantity += item.quantity;
+
         acc[category].totalRevenue += finalAmount;
 
 
