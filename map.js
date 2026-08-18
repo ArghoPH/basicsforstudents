@@ -3929,16 +3929,3 @@
 // console.log(result2);
 
 
-const products = [
-    { name: "Phone", price: 12000, stock: 5, available: true },
-    { name: "Mouse", price: 800, stock: 10, available: false },
-    { name: "Keyboard", price: 2500, stock: 0, available: true },
-    { name: "Monitor", price: 15000, stock: 3, available: true }
-];
-
-const result = products.reduce((acc, product) => {
-    if (!product.available) {
-        return acc;
-
-    }
-});
