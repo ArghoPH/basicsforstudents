@@ -4018,6 +4018,7 @@ const finalPricer = products.map(product => ({ name: product.name, finalPrice: p
 
 const availability = products.filter(product => product.stock > 0).map(product => product.name);
 
+
 console.log(upperCase);
 console.log(finalPricer);
 console.log(availability);
