@@ -3986,6 +3986,7 @@ const products = [
         category: "footwear",
         discount: 20
     },
+
     {
         id: 3,
         name: "Cap",
