@@ -4018,6 +4018,7 @@ const upperCase = products.map(product => product.name.toUpperCase());
 
 const finalPricer = products.map(product => ({ name: product.name, finalPrice: product.price - (product.price * product.discount / 100) }))
 
+
 const availability = products.filter(product => product.stock > 0).map(product => product.name);
 
 
