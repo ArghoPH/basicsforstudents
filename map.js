@@ -4023,6 +4023,7 @@ const availability = products.filter(product => product.stock > 0).map(product =
 
 
 console.log(upperCase);
+
 console.log(finalPricer);
 console.log(availability);
 
