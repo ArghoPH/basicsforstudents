@@ -4016,6 +4016,7 @@ const products = [
 
 const upperCase = products.map(product => product.name.toUpperCase());
 
+
 const finalPricer = products.map(product => ({ name: product.name, finalPrice: product.price - (product.price * product.discount / 100) }))
 
 
