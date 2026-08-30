@@ -4026,6 +4026,7 @@
 // console.log(upperCase);
 
 // console.log(finalPricer);
+
 // console.log(availability);
 
 
