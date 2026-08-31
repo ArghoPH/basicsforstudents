@@ -4027,6 +4027,7 @@
 
 // console.log(finalPricer);
 
+
 // console.log(availability);
 
 
