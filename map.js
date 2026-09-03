@@ -4031,4 +4031,78 @@
 
 // console.log(availability);
 
+const numbers = [5, 10, 15, 20];
+
+const num = numbers.map(number => number + 5);
+console.log(num)
+
+
+const products = [
+    {
+        name: "Shirt",
+        price: 1200
+    },
+
+    {
+        name: "Shoe",
+        price: 2500
+    },
+
+    {
+        name: "Cap",
+        price: 800
+    }
+];
+
+const price = products.map(product => ({ name: product.name, price: product.price + 100 }));
+
+const price2 = products.forEach(product => {
+    console.log(product.price + 100);
+});
+
+console.log(price);
+
+const students = [
+    {
+        name: "Rahim",
+        age: 20
+    },
+
+    {
+        name: "Karim",
+        age: 22
+    },
+
+    {
+        name: "Hasan",
+        age: 21
+    }
+];
+
+const names = students.map(student => student.name)
+
+console.log(names);
+
+const cart = [
+    {
+        product: "Laptop",
+        price: 50000
+    },
+
+    {
+        product: "Mouse",
+        price: 1000
+    },
+
+    {
+        product: "Keyboard",
+        price: 3000
+    }
+];
+
+
+const ar = cart.map(cart => cart.price);
+
+console.log(ar);
+
 
