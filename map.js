@@ -4118,3 +4118,22 @@
 // })
 
 // console.log(result);
+
+
+const products = [
+    {
+        id : 1,
+        name: 'Shoe',
+        price: 1200,
+        discount: 10
+    }
+]
+
+const result = products.map(product => product => {
+    return ({product: product.name, finalPrice: product.price - product.price * product.discount/100 });
+});
+
+
+console.log(result);
+
+
