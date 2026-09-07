@@ -4120,19 +4120,59 @@
 // console.log(result);
 
 
+// const products = [
+//     {
+//         id: 1,
+//         name: 'Shoe',
+//         price: 1200,
+//         discount: 10
+//     }
+// ]
+
+
+// const result = products.map(product => product => {
+//     return ({ product: product.name, finalPrice: product.price - product.price * product.discount / 100 });
+// });
+
+
+
+
+// const numbers = [20, 30, 40];
+
+// const result = numbers.every(number => number >= 20);
+
+// console.log(result);
+
 const products = [
     {
-        id: 1,
-        name: 'Shoe',
+        name: "Shirt",
         price: 1200,
-        discount: 10
+        rating: 4.5
+    },
+    {
+        name: "Shoe",
+        price: 2500,
+        rating: 4.8
+    },
+    {
+        name: "Cap",
+        price: 800,
+        rating: 4.5
+    },
+    {
+        name: "Watch",
+        price: 3500,
+        rating: 4.9
     }
-]
+];
 
-const result = products.map(product => product => {
-    return ({ product: product.name, finalPrice: product.price - product.price * product.discount / 100 });
+const result = products.sort((a, b) => {
+    if (a.rating === b.rating) {
+        return a.price - b.price
+    } else {
+        return b.rating - a.rating
+    }
+
 });
-
-
 
 console.log(result);
