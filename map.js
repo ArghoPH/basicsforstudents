@@ -4143,36 +4143,47 @@
 
 // console.log(result);
 
-const products = [
-    {
-        name: "Shirt",
-        price: 1200,
-        rating: 4.5
-    },
-    {
-        name: "Shoe",
-        price: 2500,
-        rating: 4.8
-    },
-    {
-        name: "Cap",
-        price: 800,
-        rating: 4.5
-    },
-    {
-        name: "Watch",
-        price: 3500,
-        rating: 4.9
-    }
-];
+// const products = [
 
-const result = products.sort((a, b) => {
-    if (a.rating === b.rating) {
-        return a.price - b.price
-    } else {
-        return b.rating - a.rating
-    }
+//     {
+//         name: "Shirt",
+//         price: 1200,
+//         rating: 4.5
+//     },
 
-});
+//     {
+//         name: "Shoe",
+//         price: 2500,
+//         rating: 4.8
+//     },
+
+//     {
+//         name: "Cap",
+//         price: 800,
+//         rating: 4.5
+//     },
+
+//     {
+//         name: "Watch",
+//         price: 3500,
+//         rating: 4.9
+//     }
+
+// ];
+
+// const result = products.sort((a, b) => {
+
+//     if (a.rating === b.rating) {
+//         return a.price - b.price
+//     } else {
+//         return b.rating - a.rating
+//     }
+// });
+// console.log(result);
+
+
+const rawText = "   my Name Is Karim Ahmed   ";
+
+const result = rawText.trim().toLowerCase().replace("karim", "rahim");
 
 console.log(result);
