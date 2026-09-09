@@ -4186,4 +4186,5 @@ const rawText = "   my Name Is Karim Ahmed   ";
 
 const result = rawText.trim().toLowerCase().replace("karim", "rahim");
 
+
 console.log(result);
