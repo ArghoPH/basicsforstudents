@@ -4182,9 +4182,23 @@
 // console.log(result);
 
 
-const rawText = "   my Name Is Karim Ahmed   ";
+// const rawText = "   my Name Is Karim Ahmed   ";
 
-const result = rawText.trim().toLowerCase().replace("karim", "rahim");
+// const result = rawText.trim().toLowerCase().replace("karim", "rahim");
 
 
-console.log(result);
+// console.log(result);
+
+
+
+const now = new Date();
+
+console.log(now.toLocaleString());
+console.log(now.toLocaleTimeString());
+console.log(now.getFullYear());  // 2026
+console.log(now.getMonth());     // 0-11 (⚠️ January = 0, December = 11 — এটা ভুলে যাওয়া common mistake)
+console.log(now.getDate());      // মাসের কততম দিন (1-31)
+console.log(now.getDay());       // সপ্তাহের কততম দিন (0=রবিবার, 6=শনিবার)
+console.log(now.getHours());     // ঘণ্টা (0-23)
+console.log(now.getMinutes());   // মিনিট
+console.log(now.getSeconds());  
