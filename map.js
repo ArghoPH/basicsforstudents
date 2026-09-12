@@ -4220,5 +4220,4 @@ console.log(Math.ceil(4.1));    // 5   → উপরের দিকে round (�
 console.log(Math.max(10, 25, 3)); // 25 → সবচেয়ে বড় সংখ্যা
 console.log(Math.min(10, 25, 3)); // 3  → সবচেয়ে ছোট সংখ্যা
 
-
 console.log(Math.random()); // 0 থেকে 1 এর মধ্যে একটা random দশমিক সংখ্যা (যেমন 0.7623...)
