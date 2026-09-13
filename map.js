@@ -4213,6 +4213,7 @@ const randomNum = Math.floor(Math.random() * 100) + 1;
 
 console.log(randomNum);
 
+
 console.log(Math.round(4.6));   // 5   → কাছাকাছি পূর্ণ সংখ্যায় round
 console.log(Math.floor(4.9));   // 4   → নিচের দিকে round (সবসময় ছোট)
 console.log(Math.ceil(4.1));    // 5   → উপরের দিকে round (সবসময় বড়)
