@@ -4211,6 +4211,7 @@ const randomNum = Math.floor(Math.random() * 100) + 1;
 // Math.floor() করলে → 0 থেকে 99 এর মধ্যে পূর্ণ সংখ্যা হয়
 // + 1 করলে → 1 থেকে 100 এর মধ্যে হয়ে যায়
 
+
 console.log(randomNum);
 
 
