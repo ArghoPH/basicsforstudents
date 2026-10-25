@@ -4179,8 +4179,8 @@
 //         return b.rating - a.rating
 //     }
 // });
-// console.log(result);
 
+// console.log(result);
 
 // const rawText = "   my Name Is Karim Ahmed   ";
 
@@ -4188,8 +4188,7 @@
 
 // console.log(result);
 
-
-
+// Date 
 const now = new Date();
 
 console.log(now.toLocaleString());
@@ -4212,12 +4211,9 @@ const randomNum = Math.floor(Math.random() * 100) + 1;
 
 
 console.log(randomNum);
-
-
 console.log(Math.round(4.6));   // 5   → কাছাকাছি পূর্ণ সংখ্যায় round
 console.log(Math.floor(4.9));   // 4   → নিচের দিকে round (সবসময় ছোট)
 console.log(Math.ceil(4.1));    // 5   → উপরের দিকে round (সবসময় বড়)
-
 console.log(Math.max(10, 25, 3)); // 25 → সবচেয়ে বড় সংখ্যা
 console.log(Math.min(10, 25, 3)); // 3  → সবচেয়ে ছোট সংখ্যা
 console.log(Math.random()); // 0 থেকে 1 এর মধ্যে একটা random দশমিক সংখ্যা (যেমন 0.7623...)
