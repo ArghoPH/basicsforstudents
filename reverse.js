@@ -16,3 +16,8 @@ for (let i = 0; i < sentense.length; i++) {
     console.log(i);
     console.log(sentense[i]);
 }
+
+for (let i = 1; i < sentense.length; i++) {
+    console.log(i);
+    console.log(sentense[i]);
+}
