@@ -10,10 +10,4 @@ for (const letter of sentense) {
     reverse = letter + reverse;
 }
 
-console.log(reverse)
-
-for (let i = 0; i < sentense.length; i++) {
-    console.log(i);
-    console.log(sentense[i]);
-}
 
